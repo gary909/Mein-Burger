@@ -8,3 +8,18 @@ Questions are taken from the official 2026 BAMF source:
 
 Links to complete questions official PDF:
 https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.html?nn=284310
+
+__________________________
+
+TO DO:
+
+Test Overview
+
+Add new words for B1 learners (list of words like grundgesetz etc)
+
+Create iPhone/Android App
+
+Create Book:
+New word overview
+10 tests
+Full Questions
