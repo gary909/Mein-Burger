@@ -1,7 +1,7 @@
 ﻿param(
     [Parameter(Mandatory = $true)][string]$PdfText,
     [Parameter(Mandatory = $true)][string]$Dataset,
-    [string]$OutCsv = '.\data\pdf-mismatches.csv'
+    [string]$OutCsv = '.\tools\.cache\dataset-vs-pdf.csv'
 )
 
 trap {
@@ -11,6 +11,11 @@ trap {
 }
 
 $ErrorActionPreference = 'Stop'
+
+$outDir = Split-Path -Parent $OutCsv
+if ($outDir -and -not (Test-Path -LiteralPath $outDir)) {
+    New-Item -ItemType Directory -Force -Path $outDir | Out-Null
+}
 $stateCodes = @{
     'Baden-Württemberg' = 'BW'; 'Bayern' = 'BY'; 'Berlin' = 'BE'; 'Brandenburg' = 'BB'
     'Bremen' = 'HB'; 'Hamburg' = 'HH'; 'Hessen' = 'HE'; 'Mecklenburg-Vorpommern' = 'MV'
@@ -159,5 +164,6 @@ $mismatches | Export-Csv -LiteralPath $OutCsv -NoTypeInformation -Delimiter ';' 
 Write-Output ("PDF questions parsed: federal={0}, state={1}, total={2}" -f $counts['I'], $counts['II'], $pdfQuestions.Count)
 Write-Output ("Mismatches: {0} -> {1}" -f $mismatches.Count, $OutCsv)
 $mismatches | Select-Object -First 12 | Format-Table -AutoSize -Wrap
+
 
 

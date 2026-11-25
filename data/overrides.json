@@ -1,0 +1,71 @@
+{
+  "B130": {
+    "en": "Which ballot paper would be valid in a Bundestag election? Based on the Federal Electoral Regulations (BWO), Annex 26."
+  },
+  "B232": {
+    "en": "Who is elected in the European elections?",
+    "expDe": "Bei der Europawahl werden die Abgeordneten des Europäischen Parlaments gewählt.",
+    "expEn": "In the European elections, the members of the European Parliament are elected."
+  },
+  "B247": {
+    "en": "A woman is pregnant. She is specially protected by law shortly before and after the birth of her child. What is this protection called?",
+    "optionsEn": [
+      "Parental leave",
+      "Maternity protection",
+      "Birth preparation",
+      "Postpartum period"
+    ],
+    "expDe": "Der besondere Schutz vor und nach der Geburt heißt Mutterschutz.",
+    "expEn": "The special protection before and after childbirth is called Mutterschutz (maternity protection)."
+  },
+  "B251": {
+    "en": "If someone hits a child in Germany, …"
+  },
+  "B255": {
+    "en": "In case of parenting problems, parents in Germany can get help from …",
+    "expDe": "Bei Erziehungsproblemen hilft das Jugendamt.",
+    "expEn": "In case of parenting problems, the Jugendamt (youth welfare office) provides help."
+  },
+  "B265": {
+    "en": "Where must one go first in Germany if one wants to get married?",
+    "expDe": "Die Eheschließung wird beim Standesamt angemeldet.",
+    "expEn": "A marriage is registered at the Standesamt (civil registry office)."
+  },
+  "B267": {
+    "en": "A young woman in Germany, 22 years old, lives with her boyfriend. Her parents do not like this because they do not like the boyfriend. What can the parents do?",
+    "expDe": "Die Tochter ist volljährig; die Eltern müssen ihre Entscheidung respektieren.",
+    "expEn": "The daughter is an adult; the parents must respect her decision."
+  },
+  "HB02": {
+    "en": "Which of these is a district (Stadtteil) of Bremen?",
+    "optionsEn": [
+      "Altona",
+      "Hemelingen",
+      "Pankow",
+      "Babelsberg"
+    ],
+    "expDe": "Hemelingen ist ein Stadtteil von Bremen; die anderen Optionen gehören zu anderen Städten bzw. Bundesländern.",
+    "expEn": "Hemelingen is a district (Stadtteil) of Bremen; the other options belong to other cities or states."
+  },
+  "HB07": {
+    "optionsEn": [
+      "Bremen",
+      "Munich",
+      "Frankfurt",
+      "Erfurt"
+    ],
+    "expDe": "Bremen ist neben Berlin und Hamburg einer der drei Stadtstaaten Deutschlands.",
+    "expEn": "Bremen is one of Germany's three city-states, along with Berlin and Hamburg."
+  },
+  "SN07": {
+    "en": "The state capital of Saxony is called …",
+    "optionsEn": [
+      "Leipzig.",
+      "Dresden.",
+      "Chemnitz.",
+      "Zwickau."
+    ],
+    "expDe": "Dresden ist die Landeshauptstadt von Sachsen.",
+    "expEn": "Dresden is the state capital of Saxony."
+  }
+}

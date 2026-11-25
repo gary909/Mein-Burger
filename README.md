@@ -30,7 +30,7 @@ No web server is required; `data/questions.js` is loaded as a classic script so 
 
 - **Questions**: official BAMF catalogue “Gesamtfragenkatalog zum Test Leben in Deutschland und zum Einbürgerungstest”, **Stand 07.05.2025** (PDF version 23, SHA-256 `EDD3ED5E56A35241B6CC61AA0630482DC9E64498DB508A7D6892CCEE2EC707A9`).
   <https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.html?nn=284310>
-- **Answers, English translations, explanations and images**: [abdullahbutt/leben-in-deutschland-test](https://github.com/abdullahbutt/leben-in-deutschland-test), version 2026-10-28. The translations and explanations are licensed under **CC BY-NC 4.0** (attribution, non-commercial use). Some questions are lightly reworded/simplified compared with the official PDF; the official PDF remains the authoritative wording.
+- **Answers, English translations, explanations and images**: [abdullahbutt/leben-in-deutschland-test](https://github.com/abdullahbutt/leben-in-deutschland-test), version 2026-10-28. **The German question and option wording is taken verbatim from the official BAMF PDF**; the dataset supplies the answer key, English translations, explanations and images. The translations and explanations are licensed under **CC BY-NC 4.0** (attribution, non-commercial use). `data/overrides.json` contains manual corrections for the few items where the dataset described a different paraphrase (e.g. B232, B247, HB02, SN07).
 - This is an independent learning app, not an official BAMF product. Use is intended for personal, non-commercial exam preparation.
 
 ## Project layout
@@ -40,37 +40,44 @@ No web server is required; `data/questions.js` is loaded as a classic script so 
 | `index.html` | The whole app (HTML, CSS, JavaScript) |
 | `data/questions.js` | Generated catalogue (`window.EINBUERGERUNG_DATA`) |
 | `data/images/` | Illustrations for image-based questions |
+| `data/pdf-questions.json` | Official question/option wording parsed from the BAMF PDF |
+| `data/answer-map.csv` | Dataset answer → official option mapping (confidence and notes) |
+| `data/overrides.json` | Manual corrections (English text, explanations, option translations) |
+| `data/review.csv` | Human-readable proof sheet with page numbers for all 460 questions |
 | `data/summary.json` | Counts and topic distribution of the generated catalogue |
-| `data/review.csv` | Human-readable proof sheet (question, options, answer, explanation) |
-| `data/pdf-mismatches.csv` | Output of the comparison against the official PDF text |
-| `tools/Convert/` | .NET console app that builds `data/questions.js` from the source dataset |
+| `tools/Catalogue/` | .NET builder: parses the PDF text, maps answers, writes the data files |
 | `tools/Extract/` | .NET/PdfPig helper used to inspect and render the official PDF |
-| `tools/compare-with-pdf.ps1` | Compares the generated catalogue with extracted PDF text |
+| `tools/compare-with-pdf.ps1` | Optional audit: compares the source dataset with the PDF text |
 
-`data/questions.js` is **generated** — do not edit it by hand. Change the source data or the converter instead.
+`data/questions.js` is **generated** — do not edit it by hand. Change the source data, the overrides or the builder instead.
 
 ## Regenerating the question data
 
-1. Download the source dataset (`quiz-data.json`) and the images from the [dataset repository](https://github.com/abdullahbutt/leben-in-deutschland-test) into `tools/.cache/`.
-2. Run the converter (requires the .NET SDK):
+1. Put the official PDF and the source dataset in `tools/.cache/` and download the 43 images into `data/images/` (the dataset repository contains them).
+2. Extract the PDF text:
 
    ```powershell
-   dotnet run --project tools/Convert -- tools/.cache/quiz-data.json data
+   pdftotext -layout -enc UTF-8 gesamtfragenkatalog.pdf tools/.cache/bamf.txt
    ```
 
-   The converter validates counts (300 federal, 16 × 10 state), four options per question, answer indices, duplicate questions and the existence of every referenced image. It writes `data/questions.js`, `data/summary.json` and `data/review.csv`.
-
-3. Optional: compare the generated questions with the official PDF text (requires `pdftotext`):
+3. Run the builder (requires the .NET SDK):
 
    ```powershell
-   pdftotext -layout -enc UTF-8 gesamtfragenkatalog.pdf bamf.txt
-   powershell -ExecutionPolicy Bypass -File tools/compare-with-pdf.ps1 -PdfText bamf.txt -Dataset tools/.cache/quiz-data.json
+   dotnet run --project tools/Catalogue -- tools/.cache/bamf.txt tools/.cache/quiz-data.json data data/overrides.json
+   ```
+
+   The builder parses the official wording, maps the dataset's correct option to the official option by text similarity, applies `data/overrides.json`, and validates: 300 federal + 16 × 10 state questions, four options each, valid answer indices, existing images, and no unresolved mappings. It writes `data/questions.js`, `data/pdf-questions.json`, `data/answer-map.csv`, `data/review.csv`, `data/summary.json` and `data/unresolved.json`.
+
+4. Optional: audit the source dataset against the PDF text (output goes to `tools/.cache/dataset-vs-pdf.csv`):
+
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File tools/compare-with-pdf.ps1 -PdfText tools/.cache/bamf.txt -Dataset tools/.cache/quiz-data.json
    ```
 
 ## TODO
 
-- Review the questions where the source dataset rewords the official BAMF text and align them with the PDF wording where it matters.
-- Review/expand explanations and English translations.
+- Review the remaining wording differences between the dataset and the official PDF for English translation nuance (the German text is already official).
+- Spot-check the 450 automatically mapped answers and the 10 overrides.
 - Add a B1 vocabulary list (words such as *Grundgesetz*, *Bundestag*, *Mehrheit* …).
 - Create an iPhone/Android app.
 - Create a printed book: vocabulary overview, 10 tests, full questions.
