@@ -38,6 +38,7 @@ No web server is required; `data/questions.js`, `data/vocabulary.js` and `data/i
 - **Questions**: official BAMF catalogue “Gesamtfragenkatalog zum Test Leben in Deutschland und zum Einbürgerungstest”, **Stand 07.05.2025** (PDF version 23, SHA-256 `EDD3ED5E56A35241B6CC61AA0630482DC9E64498DB508A7D6892CCEE2EC707A9`).
   <https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.html?nn=284310>
 - **Answers, English translations, explanations and images**: [abdullahbutt/leben-in-deutschland-test](https://github.com/abdullahbutt/leben-in-deutschland-test), version 2026-10-28. **The German question and option wording is taken verbatim from the official BAMF PDF**; the dataset supplies the answer key, English translations, explanations and images. The translations and explanations are licensed under **CC BY-NC 4.0** (attribution, non-commercial use). `data/overrides.json` contains manual corrections for the few items where the dataset described a different paraphrase (e.g. B232, B247, HB02, SN07).
+- **B021 image**: `data/images/21.png` is a redrawn replacement added for this project; the remaining images come from the dataset.
 - This is an independent learning app, not an official BAMF product. Use is intended for personal, non-commercial exam preparation.
 
 ## Project layout
