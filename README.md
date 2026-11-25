@@ -7,10 +7,14 @@ An app to help you pass the German Citizenship test (Einbürgerungstest).
 ## Features
 
 - **Complete catalogue**: 300 federal questions + 10 questions for each of the 16 Bundesländer = **460 questions**.
+- **Five clear sections** on the home page: Test machen, Landesfragen, Über den Test, Neue Wörter für B1 and Alle Fragen.
 - **20 practice tests + a random exam**, each with the 33-question structure (18 democracy, 9 history, 3 society, 3 state), 60-minute timer and the official pass mark of **17/33**.
+- **Landesfragen practice**: choose any Bundesland and practise all 10 state questions, untimed, with score and full review.
+- **All 460 questions** in a searchable/filterable browser with the correct answers highlighted and explanations.
+- **100 B1 vocabulary entries** (article/plural, English, example sentences) grouped by theme.
 - **German and English** question text, answer options and explanations.
 - **43 image questions** (coats of arms and Bundesland maps) with the original illustrations.
-- **Progress tracking** (seen questions, coverage per pool, results per Bundesland/test) stored in the browser via `localStorage`.
+- **Progress tracking** (seen questions, coverage per pool, results per Bundesland/test, state practice scores) stored in the browser via `localStorage`.
 - Single-page app, no framework and no build step. Works by opening `index.html` directly.
 
 ## Run
@@ -21,10 +25,11 @@ Open `index.html` in a browser. Keep the `data/` folder next to it:
 index.html
 data/
   questions.js      (generated question catalogue)
+  vocabulary.js     (100 B1 vocabulary entries)
   images/           (43 illustrations)
 ```
 
-No web server is required; `data/questions.js` is loaded as a classic script so it also works from `file://`.
+No web server is required; `data/questions.js` and `data/vocabulary.js` are loaded as classic scripts so the app also works from `file://`.
 
 ## Data sources and attribution
 
@@ -39,6 +44,7 @@ No web server is required; `data/questions.js` is loaded as a classic script so 
 |---|---|
 | `index.html` | The whole app (HTML, CSS, JavaScript) |
 | `data/questions.js` | Generated catalogue (`window.EINBUERGERUNG_DATA`) |
+| `data/vocabulary.js` | 100 B1 vocabulary entries (`window.B1_VOCABULARY`) |
 | `data/images/` | Illustrations for image-based questions |
 | `data/pdf-questions.json` | Official question/option wording parsed from the BAMF PDF |
 | `data/answer-map.csv` | Dataset answer → official option mapping (confidence and notes) |
@@ -78,6 +84,6 @@ No web server is required; `data/questions.js` is loaded as a classic script so 
 
 - Review the remaining wording differences between the dataset and the official PDF for English translation nuance (the German text is already official).
 - Spot-check the 450 automatically mapped answers and the 10 overrides.
-- Add a B1 vocabulary list (words such as *Grundgesetz*, *Bundestag*, *Mehrheit* …).
+- Expand the B1 vocabulary list beyond the initial 100 words.
 - Create an iPhone/Android app.
 - Create a printed book: vocabulary overview, 10 tests, full questions.

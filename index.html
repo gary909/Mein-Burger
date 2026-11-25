@@ -465,6 +465,682 @@
       font-weight: 800;
     }
 
+    /* ==========================================================================
+       PAGE SHELL & HOME MENU
+       ========================================================================== */
+    .page-head {
+      margin-bottom: 1.25rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--text-secondary);
+      border-radius: 999px;
+      padding: 0.42rem 0.8rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 0.85rem;
+    }
+
+    .back-link:hover {
+      background: var(--surface-subtle);
+      color: var(--text-primary);
+      border-color: var(--text-muted);
+    }
+
+    .page-title {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.25rem;
+    }
+
+    .page-subtitle {
+      color: var(--text-secondary);
+      font-size: 0.94rem;
+      max-width: 700px;
+    }
+
+    .menu-hero {
+      text-align: center;
+      padding: 1.25rem 0 1.5rem;
+    }
+
+    .menu-kicker {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .menu-heading {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      margin-bottom: 0.45rem;
+    }
+
+    .menu-intro {
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .menu-tile {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+      text-align: left;
+      min-height: 190px;
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-primary);
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      overflow: hidden;
+    }
+
+    .menu-tile::after {
+      content: "→";
+      position: absolute;
+      right: 1.35rem;
+      bottom: 1.2rem;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      transition: transform 0.18s ease, color 0.18s ease;
+    }
+
+    .menu-tile:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .menu-tile:hover::after {
+      transform: translateX(4px);
+      color: currentColor;
+    }
+
+    .menu-tile:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .menu-icon {
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .menu-tile-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .menu-tile-sub {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      max-width: 34ch;
+    }
+
+    .menu-tile-meta {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .menu-tile--test {
+      background: linear-gradient(135deg, #eff6ff, #ffffff 70%);
+      border-color: var(--accent-border);
+    }
+
+    .menu-tile--state {
+      background: linear-gradient(135deg, #ecfdf5, #ffffff 70%);
+      border-color: #a7f3d0;
+    }
+
+    .menu-tile--about {
+      background: linear-gradient(135deg, #fffbeb, #ffffff 70%);
+      border-color: #fde68a;
+      min-height: 160px;
+    }
+
+    .menu-tile--vocab {
+      background: linear-gradient(135deg, #f0fdfa, #ffffff 70%);
+      border-color: #99f6e4;
+      min-height: 160px;
+    }
+
+    .menu-tile--browse {
+      background: linear-gradient(135deg, #f5f3ff, #ffffff 70%);
+      border-color: #ddd6fe;
+      min-height: 150px;
+    }
+
+    .menu-tile--full {
+      grid-column: 1 / -1;
+    }
+
+    .home-progress {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+    .home-progress span {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.4rem 0.75rem;
+    }
+
+    /* ==========================================================================
+       ABOUT THE TEST
+       ========================================================================== */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-value {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.35rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1rem;
+    }
+
+    .info-card h2 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+    }
+
+    .info-card p {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+    }
+
+    .info-list {
+      margin: 0.25rem 0 0 1.1rem;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .info-note {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      margin-top: 0.85rem;
+    }
+
+    .info-link {
+      display: inline-flex;
+      margin-top: 0.85rem;
+      text-decoration: none;
+    }
+
+    /* ==========================================================================
+       TOOLBARS, STATE SELECTION & VOCABULARY
+       ========================================================================== */
+    .toolbar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 0.85rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+      padding: 0.55rem 0.75rem;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: 0;
+      outline: 0;
+      font: inherit;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      background: transparent;
+      min-width: 0;
+    }
+
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .chip {
+      padding: 0.42rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--text-secondary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .chip:hover {
+      background: var(--surface-subtle);
+    }
+
+    .chip.active {
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+      color: var(--accent);
+    }
+
+    .toolbar-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .select-inline {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      min-width: 220px;
+    }
+
+    .toggle-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      min-height: 44px;
+    }
+
+    .result-count {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .state-note {
+      margin: 0 0 1rem;
+    }
+
+    .states-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .state-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+      padding: 1rem 1.1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      text-align: left;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .state-card:hover {
+      border-color: var(--accent-border);
+      background: var(--accent-soft);
+      transform: translateY(-2px);
+    }
+
+    .state-card.selected {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-soft);
+    }
+
+    .state-code {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+
+    .state-name {
+      font-size: 0.98rem;
+      font-weight: 800;
+    }
+
+    .state-meta {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 0.85rem;
+    }
+
+    .vocab-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .vocab-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .vocab-word {
+      font-size: 1.02rem;
+      font-weight: 800;
+    }
+
+    .vocab-theme {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      border-radius: 999px;
+      padding: 0.15rem 0.5rem;
+      white-space: nowrap;
+    }
+
+    .vocab-en {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: 0.35rem;
+    }
+
+    .vocab-extra {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+    }
+
+    .vocab-example {
+      font-size: 0.84rem;
+      color: var(--text-primary);
+      background: var(--surface-subtle);
+      border-left: 3px solid var(--accent-border);
+      border-radius: 0 6px 6px 0;
+      padding: 0.4rem 0.6rem;
+    }
+
+    .vocab-example-en {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+    }
+
+    /* ==========================================================================
+       ALL QUESTIONS BROWSER & PRACTICE RESULTS
+       ========================================================================== */
+    .browse-list {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .browse-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .browse-item[open] {
+      border-color: var(--accent-border);
+    }
+
+    .browse-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.85rem 1rem;
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+    }
+
+    .browse-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .browse-item summary::after {
+      content: "+";
+      margin-left: auto;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-muted);
+    }
+
+    .browse-item[open] summary::after {
+      content: "−";
+    }
+
+    .browse-id {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      border-radius: 6px;
+      padding: 0.15rem 0.4rem;
+      white-space: nowrap;
+    }
+
+    .browse-question {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .browse-badge {
+      font-size: 0.66rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      white-space: nowrap;
+      margin-left: auto;
+      padding-right: 0.5rem;
+    }
+
+    .browse-body {
+      padding: 0 1rem 1rem;
+    }
+
+    .browse-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0.25rem 0 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--surface);
+    }
+
+    .browse-options {
+      display: grid;
+      gap: 0.4rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .browse-option {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      padding: 0.5rem 0.65rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      background: var(--surface-subtle);
+    }
+
+    .browse-option .opt-letter {
+      font-weight: 800;
+      color: var(--text-muted);
+    }
+
+    .browse-option.is-correct {
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .browse-option.is-correct .opt-letter {
+      color: var(--success);
+    }
+
+    .browse-en {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-style: italic;
+      display: block;
+      margin-top: 0.15rem;
+    }
+
+    .browse-explanation {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      background: var(--surface-subtle);
+      border-left: 3px solid var(--border-strong);
+      border-radius: 0 6px 6px 0;
+      padding: 0.55rem 0.7rem;
+    }
+
+    .browse-empty {
+      padding: 2rem 1rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .verdict-badge.practice {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid var(--accent-border);
+    }
+
+    @media (max-width: 760px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-tile,
+      .menu-tile--about,
+      .menu-tile--vocab,
+      .menu-tile--browse {
+        min-height: 150px;
+      }
+
+      .menu-tile--full {
+        grid-column: auto;
+      }
+
+      .page-title {
+        font-size: 1.35rem;
+      }
+
+      .toolbar-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .select-inline {
+        min-width: 0;
+      }
+
+      .vocab-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .states-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .menu-tile,
+      .menu-tile::after,
+      .state-card {
+        transition: none;
+      }
+    }
+
     .tests-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
@@ -1155,7 +1831,7 @@
           🌐 <span id="globalLangLabel">EN Übersetzung: AUS</span>
         </button>
         <button id="headerHomeBtn" class="pill-btn hidden" type="button">
-          ← Testauswahl
+          ← Startseite
         </button>
       </div>
     </div>
@@ -1166,6 +1842,65 @@
          VIEW 1: HOME / CONFIGURATION & 20 TESTS
          ====================================================================== -->
     <section id="homeView">
+      <div class="menu-hero">
+        <p class="menu-kicker">Einbürgerungstest Deutschland</p>
+        <h1 class="menu-heading">Was möchten Sie heute üben?</h1>
+        <p class="menu-intro">460 Fragen, 20 Übungstests und 16 Bundesländer – alles an einem Ort.</p>
+      </div>
+
+      <div class="menu-grid">
+        <button class="menu-tile menu-tile--test" data-target="tests" type="button">
+          <span class="menu-icon" aria-hidden="true">📝</span>
+          <span class="menu-tile-title">Test machen</span>
+          <span class="menu-tile-sub">20 Übungstests und eine Zufalls-Prüfung</span>
+          <span class="menu-tile-meta">33 Fragen · 60 Minuten · 17 zum Bestehen</span>
+        </button>
+
+        <button class="menu-tile menu-tile--state" data-target="states" type="button">
+          <span class="menu-icon" aria-hidden="true">🗺️</span>
+          <span class="menu-tile-title">Landesfragen</span>
+          <span class="menu-tile-sub">Bundesland wählen und die 10 Landesfragen üben</span>
+          <span class="menu-tile-meta">16 Bundesländer · 10 Fragen je Land</span>
+        </button>
+
+        <button class="menu-tile menu-tile--about" data-target="about" type="button">
+          <span class="menu-icon" aria-hidden="true">📖</span>
+          <span class="menu-tile-title">Über den Test</span>
+          <span class="menu-tile-sub">Ablauf, Themen und Bewertung der Prüfung</span>
+          <span class="menu-tile-meta">30 Bundesfragen + 3 Landesfragen</span>
+        </button>
+
+        <button class="menu-tile menu-tile--vocab" data-target="vocabulary" type="button">
+          <span class="menu-icon" aria-hidden="true">🗣️</span>
+          <span class="menu-tile-title">Neue Wörter für B1</span>
+          <span class="menu-tile-sub">Wichtige Begriffe aus Alltag, Verwaltung und Politik</span>
+          <span class="menu-tile-meta">100 Wörter · Deutsch &amp; Englisch</span>
+        </button>
+
+        <button class="menu-tile menu-tile--browse menu-tile--full" data-target="browse" type="button">
+          <span class="menu-icon" aria-hidden="true">📚</span>
+          <span class="menu-tile-title">Alle Fragen</span>
+          <span class="menu-tile-sub">Alle 460 Fragen mit markierten Antworten und Erläuterungen</span>
+          <span class="menu-tile-meta">300 Bundesfragen + 160 Landesfragen</span>
+        </button>
+      </div>
+
+      <div class="home-progress" aria-label="Lernfortschritt">
+        <span>✓ <strong id="homeTestsCompleted">0</strong>/20 Tests <span id="homeStateName">(Sachsen)</span></span>
+        <span>📊 <strong id="homeCoverage">0%</strong> Fragen gesehen</span>
+        <span>🗺️ <strong id="homeStateResults">0</strong>/16 Bundesländer geübt</span>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW: TESTS
+         ====================================================================== -->
+    <section id="testsView" class="hidden">
+      <div class="page-head">
+        <button class="back-link" data-target="home" type="button">← Startseite</button>
+        <h1 class="page-title">Test machen</h1>
+        <p class="page-subtitle">20 feste Übungstests und eine Zufalls-Prüfung mit je 33 Fragen.</p>
+      </div>
       <div class="hero-card">
         <div class="hero-top">
           <div>
@@ -1279,6 +2014,192 @@
     </section>
 
     <!-- ======================================================================
+         VIEW: ABOUT THE TEST
+         ====================================================================== -->
+    <section id="aboutView" class="hidden">
+      <div class="page-head">
+        <button class="back-link" data-target="home" type="button">← Startseite</button>
+        <h1 class="page-title">Über den Einbürgerungstest</h1>
+        <p class="page-subtitle">Was in der Prüfung gefragt wird – und wie diese App beim Üben hilft.</p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="stat-value">33</span>
+          <span class="stat-label">Fragen</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">60</span>
+          <span class="stat-label">Minuten</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">17 / 33</span>
+          <span class="stat-label">zum Bestehen</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">460</span>
+          <span class="stat-label">Fragen im Katalog</span>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h2>So ist die Prüfung aufgebaut</h2>
+        <ul class="info-list">
+          <li>Die Prüfung besteht aus <strong>33 Fragen</strong>: <strong>30 Bundesfragen</strong> und <strong>3 Fragen zu Ihrem Bundesland</strong>.</li>
+          <li>Zu jeder Frage gibt es <strong>vier Antworten</strong>. Genau eine Antwort ist richtig.</li>
+          <li>Für die Bearbeitung haben Sie <strong>60 Minuten</strong> Zeit.</li>
+          <li>Bestanden ist der Test mit mindestens <strong>17 von 33</strong> richtigen Antworten.</li>
+          <li>Die Fragen stammen aus dem offiziellen Gesamtfragenkatalog: <strong>300 Bundesfragen</strong> und <strong>10 Landesfragen je Bundesland</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h2>Themen der Prüfung</h2>
+        <p>Die 30 Bundesfragen stammen aus drei Themenbereichen. Die Übungstests dieser App enthalten:</p>
+        <div class="blueprint-grid">
+          <div class="blueprint-item">
+            <div>
+              <span class="blueprint-label">Leben in der Demokratie</span>
+              <span class="blueprint-sub">Grundgesetz, Wahlen, Staat</span>
+            </div>
+            <span class="blueprint-count">18</span>
+          </div>
+          <div class="blueprint-item">
+            <div>
+              <span class="blueprint-label">Geschichte &amp; Verantwortung</span>
+              <span class="blueprint-sub">NS-Zeit, DDR, Wiedervereinigung</span>
+            </div>
+            <span class="blueprint-count">9</span>
+          </div>
+          <div class="blueprint-item">
+            <div>
+              <span class="blueprint-label">Mensch und Gesellschaft</span>
+              <span class="blueprint-sub">Alltag, Religion, Zusammenleben</span>
+            </div>
+            <span class="blueprint-count">3</span>
+          </div>
+          <div class="blueprint-item">
+            <div>
+              <span class="blueprint-label">Fragen zum Bundesland</span>
+              <span class="blueprint-sub">Landespolitik, Wappen, Geografie</span>
+            </div>
+            <span class="blueprint-count">3</span>
+          </div>
+        </div>
+        <p class="info-note">Die Aufteilung 18 / 9 / 3 + 3 ist der Aufbau der Übungstests in dieser App. Die offizielle Prüfung stellt 30 Bundesfragen und 3 Landesfragen.</p>
+      </div>
+
+      <div class="info-card">
+        <h2>Was diese App bietet</h2>
+        <ul class="info-list">
+          <li><strong>20 feste Übungstests</strong> und eine <strong>Zufalls-Prüfung</strong> mit je 33 Fragen.</li>
+          <li><strong>Landesfragen</strong> für alle 16 Bundesländer – alle 10 Fragen je Land.</li>
+          <li><strong>Alle 460 Fragen</strong> zum Nachschlagen, mit markierter Antwort und Erläuterung.</li>
+          <li><strong>100 B1-Wörter</strong> aus Politik, Verwaltung und Alltag.</li>
+          <li>Deutsch und Englisch, Bilder, Timer und Lernfortschritt direkt im Browser.</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h2>Quelle und Hinweis</h2>
+        <p>
+          Wortlaut: BAMF-Gesamtfragenkatalog „Leben in Deutschland“ und „Einbürgerungstest“, Stand 07.05.2025.
+          Diese App ist eine unabhängige Lernhilfe und kein offizielles Angebot des BAMF.
+        </p>
+        <a class="btn-secondary info-link" href="https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.html?nn=284310" target="_blank" rel="noopener">
+          Zum BAMF-Fragenkatalog →
+        </a>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW: B1 VOCABULARY
+         ====================================================================== -->
+    <section id="vocabularyView" class="hidden">
+      <div class="page-head">
+        <button class="back-link" data-target="home" type="button">← Startseite</button>
+        <h1 class="page-title">Neue Wörter für B1</h1>
+        <p class="page-subtitle">Begriffe aus Politik, Verwaltung und Alltag, die im Test und im deutschen Alltag oft vorkommen.</p>
+      </div>
+
+      <div class="toolbar-card">
+        <label class="search-box">
+          <span aria-hidden="true">🔎</span>
+          <input id="vocabSearch" type="search" placeholder="Wort oder Übersetzung suchen …" autocomplete="off" />
+        </label>
+        <div class="filter-chips" id="vocabThemes" role="group" aria-label="Themen">
+          <button class="chip active" data-vocab-theme="all" type="button">Alle</button>
+          <button class="chip" data-vocab-theme="state" type="button">Staat &amp; Politik</button>
+          <button class="chip" data-vocab-theme="admin" type="button">Verwaltung &amp; Dokumente</button>
+          <button class="chip" data-vocab-theme="work" type="button">Arbeit &amp; Soziales</button>
+          <button class="chip" data-vocab-theme="housing" type="button">Wohnen &amp; Geld</button>
+          <button class="chip" data-vocab-theme="health" type="button">Gesundheit</button>
+          <button class="chip" data-vocab-theme="family" type="button">Familie &amp; Bildung</button>
+        </div>
+      </div>
+
+      <p class="result-count" id="vocabCount">Wörter werden geladen …</p>
+      <div id="vocabList" class="vocab-grid"></div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW: STATE QUESTIONS
+         ====================================================================== -->
+    <section id="statesView" class="hidden">
+      <div class="page-head">
+        <button class="back-link" data-target="home" type="button">← Startseite</button>
+        <h1 class="page-title">Landesfragen</h1>
+        <p class="page-subtitle">Wählen Sie Ihr Bundesland. Sie üben dann alle 10 Landesfragen dieses Bundeslandes.</p>
+      </div>
+
+      <div class="info-note state-note">
+        Das ausgewählte Bundesland wird auch für die 3 Landesfragen in den 33er-Übungstests verwendet.
+      </div>
+
+      <div id="statesGrid" class="states-grid"></div>
+    </section>
+
+    <!-- ======================================================================
+         VIEW: ALL QUESTIONS
+         ====================================================================== -->
+    <section id="browseView" class="hidden">
+      <div class="page-head">
+        <button class="back-link" data-target="home" type="button">← Startseite</button>
+        <h1 class="page-title">Alle Fragen</h1>
+        <p class="page-subtitle">Alle 460 Fragen mit markierter richtiger Antwort und Erläuterung – zum Lesen und Wiederholen.</p>
+      </div>
+
+      <div class="toolbar-card">
+        <label class="search-box">
+          <span aria-hidden="true">🔎</span>
+          <input id="browseSearch" type="search" placeholder="Frage, Antwort oder Erläuterung suchen …" autocomplete="off" />
+        </label>
+
+        <div class="filter-chips" id="browseTopics" role="group" aria-label="Themen">
+          <button class="chip active" data-browse-topic="all" type="button">Alle (460)</button>
+          <button class="chip" data-browse-topic="democracy" type="button">Demokratie (150)</button>
+          <button class="chip" data-browse-topic="history" type="button">Geschichte (100)</button>
+          <button class="chip" data-browse-topic="society" type="button">Gesellschaft (50)</button>
+          <button class="chip" data-browse-topic="state" type="button">Landesfragen (160)</button>
+        </div>
+
+        <div class="toolbar-row">
+          <label class="select-inline">
+            <span class="field-label">Bundesland (nur Landesfragen)</span>
+            <select id="browseStateSelect" class="select-input" disabled></select>
+          </label>
+          <label class="toggle-inline">
+            <input type="checkbox" id="browseAnswersToggle" checked />
+            <span>Antworten anzeigen</span>
+          </label>
+        </div>
+      </div>
+
+      <p class="result-count" id="browseCount">Fragen werden geladen …</p>
+      <div id="browseList" class="browse-list"></div>
+    </section>
+
+    <!-- ======================================================================
          VIEW 2: ACTIVE EXAM
          ====================================================================== -->
     <section id="examView" class="hidden">
@@ -1366,9 +2287,9 @@
       </div>
 
       <div class="review-controls">
-        <h2 class="section-title">Detaillierte Auswertung aller 33 Fragen</h2>
+        <h2 class="section-title" id="reviewTitle">Detaillierte Auswertung aller 33 Fragen</h2>
         <div class="filter-tabs" role="tablist">
-          <button class="filter-tab active" data-filter="all" type="button">Alle (33)</button>
+          <button class="filter-tab active" data-filter="all" id="filterAllTab" type="button">Alle (33)</button>
           <button class="filter-tab" data-filter="wrong" type="button" id="filterWrongTab">Falsch / Offen (0)</button>
           <button class="filter-tab" data-filter="correct" type="button" id="filterCorrectTab">Richtig (0)</button>
         </div>
@@ -1397,6 +2318,7 @@
   </footer>
 
   <script src="data/questions.js"></script>
+  <script src="data/vocabulary.js"></script>
 
   <script>
     /* ==========================================================================
@@ -1462,6 +2384,24 @@
       { id: 20, focus: "Alle Themenbereiche · 33 Fragen" }
     ];
 
+    const CATEGORY_LABELS = {
+      democracy: "Leben in der Demokratie",
+      history: "Geschichte und Verantwortung",
+      society: "Mensch und Gesellschaft",
+      state: "Bundesland"
+    };
+
+    const VOCAB_THEME_LABELS = {
+      state: "Staat & Politik",
+      admin: "Verwaltung & Dokumente",
+      work: "Arbeit & Soziales",
+      housing: "Wohnen & Geld",
+      health: "Gesundheit",
+      family: "Familie & Bildung"
+    };
+
+    let BROWSE_QUESTIONS = [];
+
     const STORAGE_KEY = "einbuergerungstest_trainer_v3";
 
     /* ==========================================================================
@@ -1482,7 +2422,17 @@
       singleQuestionEnVisible: false,
       secondsRemaining: 3600,
       timerInterval: null,
-      reviewFilter: "all"
+      reviewFilter: "all",
+      examKind: null,
+      returnView: "tests",
+      examPassMark: 17,
+      statePracticeResults: {},
+      browseTopic: "all",
+      browseState: "all",
+      browseSearch: "",
+      browseAnswersVisible: true,
+      vocabSearch: "",
+      vocabTheme: "all"
     };
 
     function loadPersistedState() {
@@ -1508,6 +2458,9 @@
         if (parsed.testResults && typeof parsed.testResults === "object") {
           state.testResults = parsed.testResults;
         }
+        if (parsed.statePracticeResults && typeof parsed.statePracticeResults === "object") {
+          state.statePracticeResults = parsed.statePracticeResults;
+        }
       } catch (err) {
         console.warn("Could not read saved state:", err);
       }
@@ -1521,7 +2474,8 @@
           prioritizeUnseen: state.prioritizeUnseen,
           timerEnabled: state.timerEnabled,
           seenQuestionIds: state.seenQuestionIds,
-          testResults: state.testResults
+          testResults: state.testResults,
+          statePracticeResults: state.statePracticeResults
         };
         localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
       } catch (err) {
@@ -1637,6 +2591,11 @@
        ========================================================================== */
     const els = {
       homeView: document.getElementById("homeView"),
+      testsView: document.getElementById("testsView"),
+      aboutView: document.getElementById("aboutView"),
+      vocabularyView: document.getElementById("vocabularyView"),
+      statesView: document.getElementById("statesView"),
+      browseView: document.getElementById("browseView"),
       examView: document.getElementById("examView"),
       resultsView: document.getElementById("resultsView"),
       brandHomeBtn: document.getElementById("brandHomeBtn"),
@@ -1680,7 +2639,24 @@
       categoryBreakdownGrid: document.getElementById("categoryBreakdownGrid"),
       filterWrongTab: document.getElementById("filterWrongTab"),
       filterCorrectTab: document.getElementById("filterCorrectTab"),
+      filterAllTab: document.getElementById("filterAllTab"),
+      reviewTitle: document.getElementById("reviewTitle"),
       reviewListContainer: document.getElementById("reviewListContainer"),
+      statesGrid: document.getElementById("statesGrid"),
+      homeTestsCompleted: document.getElementById("homeTestsCompleted"),
+      homeStateName: document.getElementById("homeStateName"),
+      homeCoverage: document.getElementById("homeCoverage"),
+      homeStateResults: document.getElementById("homeStateResults"),
+      vocabSearch: document.getElementById("vocabSearch"),
+      vocabThemes: document.getElementById("vocabThemes"),
+      vocabCount: document.getElementById("vocabCount"),
+      vocabList: document.getElementById("vocabList"),
+      browseSearch: document.getElementById("browseSearch"),
+      browseTopics: document.getElementById("browseTopics"),
+      browseStateSelect: document.getElementById("browseStateSelect"),
+      browseAnswersToggle: document.getElementById("browseAnswersToggle"),
+      browseCount: document.getElementById("browseCount"),
+      browseList: document.getElementById("browseList"),
       modalBackdrop: document.getElementById("modalBackdrop"),
       modalTitle: document.getElementById("modalTitle"),
       modalBody: document.getElementById("modalBody"),
@@ -1706,6 +2682,12 @@
       updateStateLabels();
       updateCoverageBars();
       renderTestCards();
+      buildBrowseQuestions();
+      populateBrowseStates();
+      renderStateCards();
+      renderVocabulary();
+      renderBrowseList();
+      updateHomeStats();
 
       bindEvents();
     }
@@ -1796,23 +2778,247 @@
       els.completedSummary.textContent = `${completedCount} von ${TEST_CATALOG.length} Tests abgeschlossen (${state.selectedState})`;
     }
 
+    function updateHomeStats() {
+      const bl = BUNDESLAENDER.find(b => b.code === state.selectedState) || BUNDESLAENDER[12];
+      const completed = Object.keys(state.testResults)
+        .filter(key => key.startsWith(`${state.selectedState}_`)).length;
+      const generalPool = [
+        ...QUESTION_BANK.democracy,
+        ...QUESTION_BANK.history,
+        ...QUESTION_BANK.society
+      ];
+      const seenSet = new Set(state.seenQuestionIds);
+      const seenCount = generalPool.filter(question => seenSet.has(question.id)).length;
+      const pct = generalPool.length ? Math.round((seenCount / generalPool.length) * 100) : 0;
+
+      if (els.homeTestsCompleted) els.homeTestsCompleted.textContent = completed;
+      if (els.homeStateName) els.homeStateName.textContent = `(${bl.name})`;
+      if (els.homeCoverage) els.homeCoverage.textContent = `${pct}%`;
+      if (els.homeStateResults) els.homeStateResults.textContent = Object.keys(state.statePracticeResults).length;
+    }
+
+    function renderStateCards() {
+      if (!els.statesGrid) return;
+      els.statesGrid.innerHTML = "";
+
+      BUNDESLAENDER.forEach(bl => {
+        const result = state.statePracticeResults[bl.code];
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "state-card" + (bl.code === state.selectedState ? " selected" : "");
+        button.innerHTML = `
+          <span class="state-code">${bl.code}</span>
+          <span class="state-name">${bl.name}</span>
+          <span class="state-meta">${result ? `${result.score}/${result.total} · geübt` : "10 Fragen"}</span>
+        `;
+        button.addEventListener("click", () => startStatePractice(bl.code));
+        els.statesGrid.appendChild(button);
+      });
+    }
+
+    function renderVocabulary() {
+      if (!els.vocabList) return;
+      const items = Array.isArray(window.B1_VOCABULARY) ? window.B1_VOCABULARY : [];
+      const query = state.vocabSearch.trim().toLowerCase();
+      const filtered = items.filter(item => {
+        if (state.vocabTheme !== "all" && item.theme !== state.vocabTheme) return false;
+        if (!query) return true;
+        return [item.article, item.word, item.plural, item.en, item.exampleDe, item.exampleEn, item.kind]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase()
+          .includes(query);
+      });
+
+      els.vocabCount.textContent = `${filtered.length} von ${items.length} Wörtern`;
+      els.vocabList.innerHTML = filtered.length
+        ? filtered.map(vocabularyCardHtml).join("")
+        : `<div class="browse-empty">Keine Wörter gefunden.</div>`;
+    }
+
+    function vocabularyCardHtml(item) {
+      const display = item.article ? `${item.article} ${item.word}` : item.word;
+      const extra = item.plural ? `Plural: ${item.plural}` : item.kind || "";
+      return `
+        <article class="vocab-card">
+          <div class="vocab-head">
+            <span class="vocab-word">${escapeHtml(display)}</span>
+            <span class="vocab-theme">${escapeHtml(VOCAB_THEME_LABELS[item.theme] || item.theme || "")}</span>
+          </div>
+          <div class="vocab-en">${escapeHtml(item.en)}</div>
+          ${extra ? `<div class="vocab-extra">${escapeHtml(extra)}</div>` : ""}
+          <div class="vocab-example">${escapeHtml(item.exampleDe)}</div>
+          ${item.exampleEn ? `<div class="vocab-example-en">${escapeHtml(item.exampleEn)}</div>` : ""}
+        </article>
+      `;
+    }
+
+    function buildBrowseQuestions() {
+      const general = DATASET.general.map(question => ({
+        ...question,
+        categoryKey: question.topic,
+        categoryLabel: CATEGORY_LABELS[question.topic] || question.topic
+      }));
+
+      const states = [];
+      Object.entries(DATASET.states).forEach(([code, list]) => {
+        const bl = BUNDESLAENDER.find(candidate => candidate.code === code);
+        list.forEach(question => {
+          states.push({
+            ...question,
+            categoryKey: "state",
+            categoryLabel: `Bundesland: ${bl ? bl.name : code}`,
+            stateCode: code
+          });
+        });
+      });
+
+      BROWSE_QUESTIONS = general.concat(states);
+    }
+
+    function populateBrowseStates() {
+      if (!els.browseStateSelect) return;
+      els.browseStateSelect.innerHTML = `<option value="all">Alle Bundesländer</option>`;
+      BUNDESLAENDER.forEach(bl => {
+        const option = document.createElement("option");
+        option.value = bl.code;
+        option.textContent = bl.name;
+        els.browseStateSelect.appendChild(option);
+      });
+    }
+
+    function renderBrowseList() {
+      if (!els.browseList) return;
+
+      const query = state.browseSearch.trim().toLowerCase();
+      const filtered = BROWSE_QUESTIONS.filter(item => {
+        if (state.browseTopic !== "all" && item.categoryKey !== state.browseTopic) return false;
+        if (state.browseTopic === "state" && state.browseState !== "all" && item.stateCode !== state.browseState) return false;
+        if (!query) return true;
+
+        const haystack = [
+          item.id,
+          item.de,
+          item.en,
+          item.expDe,
+          item.expEn,
+          item.categoryLabel,
+          ...item.optionsDe,
+          ...item.optionsEn
+        ].filter(Boolean).join(" ").toLowerCase();
+
+        return haystack.includes(query);
+      });
+
+      if (els.browseStateSelect) {
+        els.browseStateSelect.disabled = state.browseTopic !== "state";
+      }
+
+      els.browseCount.textContent = `${filtered.length} von ${BROWSE_QUESTIONS.length} Fragen`;
+      els.browseList.innerHTML = filtered.length
+        ? filtered.map(browseItemHtml).join("")
+        : `<div class="browse-empty">Keine Fragen gefunden.</div>`;
+    }
+
+    function browseItemHtml(item) {
+      const letters = ["A", "B", "C", "D"];
+      const showAnswers = state.browseAnswersVisible;
+      const questionEn = state.showEnglishGlobal
+        ? `<span class="browse-en">${escapeHtml(item.en)}</span>`
+        : "";
+      const image = item.image
+        ? `<img class="browse-image" src="${escapeHtml(item.image)}" alt="Abbildung zur Frage" loading="lazy" />`
+        : "";
+      const options = item.optionsDe.map((text, index) => {
+        const isCorrect = showAnswers && index === item.correct;
+        const optionEn = state.showEnglishGlobal
+          ? `<span class="browse-en">${escapeHtml(item.optionsEn[index] || "")}</span>`
+          : "";
+        return `<div class="browse-option${isCorrect ? " is-correct" : ""}">
+          <span class="opt-letter">${letters[index]}</span>
+          <span>${escapeHtml(text)}${optionEn}</span>
+          <span>${isCorrect ? "✓" : ""}</span>
+        </div>`;
+      }).join("");
+      const explanation = showAnswers
+        ? `<div class="browse-explanation"><strong>Erläuterung:</strong> ${escapeHtml(item.expDe)}
+            ${state.showEnglishGlobal ? `<br /><em>${escapeHtml(item.expEn)}</em>` : ""}
+          </div>`
+        : "";
+
+      return `<details class="browse-item">
+        <summary>
+          <span class="browse-id">${escapeHtml(item.id)}</span>
+          <span class="browse-question">${escapeHtml(item.de)}${questionEn}</span>
+          <span class="browse-badge">${escapeHtml(item.categoryLabel)}</span>
+        </summary>
+        <div class="browse-body">
+          ${image}
+          <div class="browse-options">${options}</div>
+          ${explanation}
+        </div>
+      </details>`;
+    }
+
+    function escapeHtml(value) {
+      return String(value == null ? "" : value).replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[character]));
+    }
+
     /* ==========================================================================
        9. EXAM EXECUTION & TIMER
        ========================================================================== */
     function switchView(viewName) {
-      els.homeView.classList.toggle("hidden", viewName !== "home");
-      els.examView.classList.toggle("hidden", viewName !== "exam");
-      els.resultsView.classList.toggle("hidden", viewName !== "results");
-      els.headerHomeBtn.classList.toggle("hidden", viewName === "home");
+      const views = {
+        home: els.homeView,
+        tests: els.testsView,
+        about: els.aboutView,
+        vocabulary: els.vocabularyView,
+        states: els.statesView,
+        browse: els.browseView,
+        exam: els.examView,
+        results: els.resultsView
+      };
+
+      Object.entries(views).forEach(([name, element]) => {
+        if (element) element.classList.toggle("hidden", name !== viewName);
+      });
+
+      const showHeaderBack = viewName === "exam" || viewName === "results";
+      els.headerHomeBtn.classList.toggle("hidden", !showHeaderBack);
+      els.headerHomeBtn.textContent =
+        viewName === "exam" ? "← Test verlassen" : viewName === "results" ? "← Zurück" : "← Startseite";
 
       if (viewName !== "exam") {
         stopTimer();
         els.timerDisplay.classList.add("hidden");
       }
+
+      if (viewName === "tests") {
+        updateStateLabels();
+        updateCoverageBars();
+        renderTestCards();
+      } else if (viewName === "states") {
+        renderStateCards();
+      } else if (viewName === "browse") {
+        renderBrowseList();
+      } else if (viewName === "vocabulary") {
+        renderVocabulary();
+      }
+
+      updateHomeStats();
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     function startExam(testId) {
+      state.examKind = testId === "random" ? "random" : "test";
+      state.returnView = "tests";
+      state.examPassMark = 17;
       state.activeTestId = testId;
       state.questions = generateExamQuestions(testId, state.selectedState);
       state.currentIndex = 0;
@@ -1833,6 +3039,46 @@
       if (state.timerEnabled) {
         startTimer();
       }
+    }
+
+    function startStatePractice(stateCode) {
+      state.selectedState = stateCode;
+      if (els.stateSelect) els.stateSelect.value = stateCode;
+      savePersistedState();
+      updateStateLabels();
+      updateCoverageBars();
+      renderTestCards();
+      renderStateCards();
+      startStateExam();
+    }
+
+    function startStateExam() {
+      const bl = BUNDESLAENDER.find(b => b.code === state.selectedState) || BUNDESLAENDER[12];
+      const pool = QUESTION_BANK.states[state.selectedState] || QUESTION_BANK.states.SN;
+
+      state.examKind = "state";
+      state.returnView = "states";
+      state.examPassMark = null;
+      state.activeTestId = `state:${bl.code}`;
+      state.questions = pickCategoryQuestions(
+        pool,
+        10,
+        "state",
+        `Bundesland: ${bl.name}`,
+        Math.random,
+        new Set(state.seenQuestionIds),
+        false
+      );
+      state.currentIndex = 0;
+      state.userAnswers = {};
+      state.flaggedQuestions = new Set();
+      state.singleQuestionEnVisible = false;
+
+      els.examTitleBadge.textContent = `Landesfragen – ${bl.name}`;
+      switchView("exam");
+      renderQuestion();
+      renderQuestionNavigator();
+      els.timerDisplay.classList.add("hidden");
     }
 
     function startTimer() {
@@ -1987,75 +3233,90 @@
     function finishExam(timedOut) {
       stopTimer();
 
+      const bl = BUNDESLAENDER.find(b => b.code === state.selectedState) || BUNDESLAENDER[12];
+      const total = state.questions.length;
       let totalCorrect = 0;
-      const categoryStats = {
-        democracy: { label: "Leben in der Demokratie", correct: 0, total: 0 },
-        history: { label: "Geschichte & Verantwortung", correct: 0, total: 0 },
-        society: { label: "Mensch & Gesellschaft", correct: 0, total: 0 },
-        state: { label: "Bundesland", correct: 0, total: 0 }
-      };
-
+      const categoryStats = {};
       const seenSet = new Set(state.seenQuestionIds);
 
-      state.questions.forEach((q, idx) => {
-        seenSet.add(q.id);
-        const userAns = state.userAnswers[idx];
-        const isCorrect = userAns === q.correct;
+      state.questions.forEach((question, index) => {
+        seenSet.add(question.id);
+        const userAnswer = state.userAnswers[index];
+        const isCorrect = userAnswer === question.correct;
         if (isCorrect) totalCorrect++;
 
-        if (categoryStats[q.categoryKey]) {
-          categoryStats[q.categoryKey].total++;
-          if (isCorrect) categoryStats[q.categoryKey].correct++;
+        const key = question.categoryKey || "state";
+        if (!categoryStats[key]) {
+          categoryStats[key] = {
+            label: key === "state" ? `Bundesland (${bl.name})` : CATEGORY_LABELS[key] || key,
+            correct: 0,
+            total: 0
+          };
         }
+        categoryStats[key].total++;
+        if (isCorrect) categoryStats[key].correct++;
       });
 
       state.seenQuestionIds = Array.from(seenSet);
-      const passed = totalCorrect >= 17;
+      const passMark = state.examPassMark;
+      const practice = passMark == null;
+      const passed = practice ? null : totalCorrect >= passMark;
 
-      if (state.activeTestId !== "random") {
-        const resultKey = `${state.selectedState}_${state.activeTestId}`;
-        state.testResults[resultKey] = { score: totalCorrect, passed };
+      if (state.examKind === "state") {
+        state.statePracticeResults[state.selectedState] = { score: totalCorrect, total };
+      } else if (state.examKind !== "random") {
+        state.testResults[`${state.selectedState}_${state.activeTestId}`] = { score: totalCorrect, passed };
       }
 
       savePersistedState();
       updateCoverageBars();
       renderTestCards();
+      renderStateCards();
+      updateHomeStats();
 
-      // Render Results Banner
-      const pct = Math.round((totalCorrect / state.questions.length) * 100);
-      els.verdictBadge.className = `verdict-badge ${passed ? "pass" : "fail"}`;
-      els.verdictBadge.textContent = passed ? "✓ TEST BESTANDEN" : "✗ NICHT BESTANDEN";
-      els.scoreHeadline.textContent = `${totalCorrect} / ${state.questions.length} Richtige (${pct}%)`;
+      const pct = Math.round((totalCorrect / total) * 100);
+      els.verdictBadge.className = `verdict-badge ${practice ? "practice" : passed ? "pass" : "fail"}`;
+      els.verdictBadge.textContent = practice
+        ? "✓ ÜBUNG ABGESCHLOSSEN"
+        : passed
+          ? "✓ TEST BESTANDEN"
+          : "✗ NICHT BESTANDEN";
+      els.scoreHeadline.textContent = `${totalCorrect} / ${total} Richtige (${pct}%)`;
 
       if (timedOut) {
         els.scoreSubtext.textContent = `Die Zeit ist abgelaufen. ${
           passed
-            ? "Sie haben dennoch mindestens 17 Punkte erreicht und bestanden!"
-            : "Für das Bestehen sind mindestens 17 richtige Antworten erforderlich."
+            ? `Sie haben dennoch mindestens ${passMark} Punkte erreicht und bestanden!`
+            : `Für das Bestehen sind mindestens ${passMark} richtige Antworten erforderlich.`
         }`;
+      } else if (practice) {
+        els.scoreSubtext.textContent = "Sie haben alle 10 Landesfragen bearbeitet. Wiederholen Sie die Übung oder wählen Sie ein anderes Bundesland.";
       } else {
         els.scoreSubtext.textContent = passed
-          ? "Herzlichen Glückwunsch! Sie haben die erforderliche Mindestpunktzahl von 17 Punkten erreicht."
-          : "Für das Bestehen des Einbürgerungstests benötigen Sie mindestens 17 richtige Antworten.";
+          ? `Herzlichen Glückwunsch! Sie haben die erforderliche Mindestpunktzahl von ${passMark} Punkten erreicht.`
+          : `Für das Bestehen des Einbürgerungstests benötigen Sie mindestens ${passMark} richtige Antworten.`;
       }
 
-      // Render Category Breakdown
-      const bl = BUNDESLAENDER.find(b => b.code === state.selectedState);
-      categoryStats.state.label = `Bundesland (${bl.name})`;
       els.categoryBreakdownGrid.innerHTML = "";
-      Object.values(categoryStats).forEach(cat => {
+      Object.values(categoryStats).forEach(category => {
+        if (category.total === 0) return;
         const div = document.createElement("div");
         div.className = "breakdown-card";
         div.innerHTML = `
-          <div class="breakdown-name">${cat.label}</div>
-          <div class="breakdown-val">${cat.correct} / ${cat.total}</div>
+          <div class="breakdown-name">${category.label}</div>
+          <div class="breakdown-val">${category.correct} / ${category.total}</div>
         `;
         els.categoryBreakdownGrid.appendChild(div);
       });
 
-      const wrongCount = state.questions.length - totalCorrect;
+      const wrongCount = total - totalCorrect;
+      els.filterAllTab.textContent = `Alle (${total})`;
       els.filterWrongTab.textContent = `Falsch / Offen (${wrongCount})`;
       els.filterCorrectTab.textContent = `Richtig (${totalCorrect})`;
+      els.reviewTitle.textContent = `Detaillierte Auswertung aller ${total} Fragen`;
+
+      els.backToTestsBtn.textContent = state.examKind === "state" ? "Landesfragen anzeigen" : "Alle Tests anzeigen";
+      els.retakeTestBtn.textContent = state.examKind === "state" ? "↻ Übung wiederholen" : "↻ Test wiederholen";
 
       state.reviewFilter = "all";
       document.querySelectorAll(".filter-tab").forEach(tab => {
@@ -2141,6 +3402,8 @@
           renderQuestion();
         } else if (!els.resultsView.classList.contains("hidden")) {
           renderReviewList();
+        } else if (!els.browseView.classList.contains("hidden")) {
+          renderBrowseList();
         }
       });
 
@@ -2150,6 +3413,8 @@
         updateStateLabels();
         updateCoverageBars();
         renderTestCards();
+        renderStateCards();
+        updateHomeStats();
       });
 
       els.unseenOnlyToggle.addEventListener("change", e => {
@@ -2182,9 +3447,12 @@
           onConfirm: () => {
             state.seenQuestionIds = [];
             state.testResults = {};
+            state.statePracticeResults = {};
             savePersistedState();
             updateCoverageBars();
             renderTestCards();
+            renderStateCards();
+            updateHomeStats();
             hideModal();
           }
         });
@@ -2227,30 +3495,113 @@
 
       els.submitExamBtn.addEventListener("click", handleSubmitRequest);
 
-      const confirmLeaveExam = () => {
+      const confirmLeaveExam = (onConfirm = () => switchView("home")) => {
         if (!els.examView.classList.contains("hidden")) {
           showModal({
             title: "Prüfung abbrechen?",
-            body: "Ihr aktueller Fortschritt in diesem Test geht verloren, wenn Sie zur Testauswahl zurückkehren.",
+            body: "Ihr aktueller Fortschritt in diesem Test geht verloren, wenn Sie die Prüfung verlassen.",
             confirmText: "Test verlassen",
             showCancel: true,
             onConfirm: () => {
               hideModal();
-              switchView("home");
+              onConfirm();
             }
           });
         } else {
-          switchView("home");
+          onConfirm();
         }
       };
 
-      els.brandHomeBtn.addEventListener("click", confirmLeaveExam);
-      els.headerHomeBtn.addEventListener("click", confirmLeaveExam);
-      els.backToTestsBtn.addEventListener("click", () => switchView("home"));
+      els.brandHomeBtn.addEventListener("click", () => {
+        confirmLeaveExam(() => switchView("home"));
+      });
+
+      els.headerHomeBtn.addEventListener("click", () => {
+        if (!els.examView.classList.contains("hidden")) {
+          confirmLeaveExam(() => switchView("home"));
+        } else if (!els.resultsView.classList.contains("hidden")) {
+          switchView(state.returnView);
+        } else {
+          switchView("home");
+        }
+      });
+
+      els.backToTestsBtn.addEventListener("click", () => switchView(state.returnView));
 
       els.retakeTestBtn.addEventListener("click", () => {
-        startExam(state.activeTestId);
+        if (state.examKind === "state") {
+          startStateExam();
+        } else {
+          startExam(state.activeTestId);
+        }
       });
+
+      document.querySelectorAll("[data-target]").forEach(element => {
+        element.addEventListener("click", () => {
+          const target = element.dataset.target;
+          if (target === "home" && !els.examView.classList.contains("hidden")) {
+            confirmLeaveExam(() => switchView("home"));
+          } else {
+            switchView(target);
+          }
+        });
+      });
+
+      if (els.vocabSearch) {
+        els.vocabSearch.addEventListener("input", event => {
+          state.vocabSearch = event.target.value;
+          renderVocabulary();
+        });
+      }
+
+      if (els.vocabThemes) {
+        els.vocabThemes.addEventListener("click", event => {
+          const chip = event.target.closest("[data-vocab-theme]");
+          if (!chip) return;
+          state.vocabTheme = chip.dataset.vocabTheme;
+          els.vocabThemes.querySelectorAll("[data-vocab-theme]").forEach(button => {
+            button.classList.toggle("active", button === chip);
+          });
+          renderVocabulary();
+        });
+      }
+
+      if (els.browseSearch) {
+        els.browseSearch.addEventListener("input", event => {
+          state.browseSearch = event.target.value;
+          renderBrowseList();
+        });
+      }
+
+      if (els.browseTopics) {
+        els.browseTopics.addEventListener("click", event => {
+          const chip = event.target.closest("[data-browse-topic]");
+          if (!chip) return;
+          state.browseTopic = chip.dataset.browseTopic;
+          els.browseTopics.querySelectorAll("[data-browse-topic]").forEach(button => {
+            button.classList.toggle("active", button === chip);
+          });
+          if (state.browseTopic !== "state") {
+            state.browseState = "all";
+            if (els.browseStateSelect) els.browseStateSelect.value = "all";
+          }
+          renderBrowseList();
+        });
+      }
+
+      if (els.browseStateSelect) {
+        els.browseStateSelect.addEventListener("change", event => {
+          state.browseState = event.target.value;
+          renderBrowseList();
+        });
+      }
+
+      if (els.browseAnswersToggle) {
+        els.browseAnswersToggle.addEventListener("change", event => {
+          state.browseAnswersVisible = event.target.checked;
+          renderBrowseList();
+        });
+      }
 
       document.querySelectorAll(".filter-tab").forEach(tab => {
         tab.addEventListener("click", () => {
