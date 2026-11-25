@@ -13,6 +13,7 @@ An app to help you pass the German Citizenship test (Einbürgerungstest).
 - **All 460 questions** in a searchable/filterable browser with the correct answers highlighted and explanations.
 - **100 B1 vocabulary entries** (article/plural, English, example sentences) grouped by theme.
 - **German and English** question text, answer options and explanations.
+- **Full German/English interface**: the EN toggle in the header translates the whole UI (home, About, tests, states, vocabulary, browse, exam controls and results). Questions remain in German with the English translation underneath; vocabulary English translations are shown only in EN mode.
 - **43 image questions** (coats of arms and Bundesland maps) with the original illustrations.
 - **Progress tracking** (seen questions, coverage per pool, results per Bundesland/test, state practice scores) stored in the browser via `localStorage`.
 - Single-page app, no framework and no build step. Works by opening `index.html` directly.
@@ -26,10 +27,11 @@ index.html
 data/
   questions.js      (generated question catalogue)
   vocabulary.js     (100 B1 vocabulary entries)
+  i18n.js           (German/English UI translations)
   images/           (43 illustrations)
 ```
 
-No web server is required; `data/questions.js` and `data/vocabulary.js` are loaded as classic scripts so the app also works from `file://`.
+No web server is required; `data/questions.js`, `data/vocabulary.js` and `data/i18n.js` are loaded as classic scripts so the app also works from `file://`.
 
 ## Data sources and attribution
 
@@ -45,6 +47,7 @@ No web server is required; `data/questions.js` and `data/vocabulary.js` are load
 | `index.html` | The whole app (HTML, CSS, JavaScript) |
 | `data/questions.js` | Generated catalogue (`window.EINBUERGERUNG_DATA`) |
 | `data/vocabulary.js` | 100 B1 vocabulary entries (`window.B1_VOCABULARY`) |
+| `data/i18n.js` | German/English UI strings (`window.I18N`) |
 | `data/images/` | Illustrations for image-based questions |
 | `data/pdf-questions.json` | Official question/option wording parsed from the BAMF PDF |
 | `data/answer-map.csv` | Dataset answer → official option mapping (confidence and notes) |

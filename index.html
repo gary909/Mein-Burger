@@ -1813,24 +1813,24 @@
 
   <header>
     <div class="header-inner">
-      <div class="brand" id="brandHomeBtn" title="Zurück zur Übersicht">
+      <div class="brand" id="brandHomeBtn" title="Zurück zur Übersicht" data-i18n-title="global.brandHomeTitle">
         <div class="brand-flag" aria-hidden="true">
           <span style="background:#111827"></span>
           <span style="background:#dc2626"></span>
           <span style="background:#facc15"></span>
         </div>
         <div>
-          <div class="brand-title">Einbürgerungstest Trainer</div>
-          <div class="brand-subtitle">33 Fragen · 18 Demokratie · 9 Geschichte · 3 Gesellschaft · 3 Bundesland</div>
+          <div class="brand-title" data-i18n="global.brandTitle">Einbürgerungstest Trainer</div>
+          <div class="brand-subtitle" data-i18n="global.brandSubtitle">33 Fragen · 18 Demokratie · 9 Geschichte · 3 Gesellschaft · 3 Bundesland</div>
         </div>
       </div>
 
       <div class="header-controls">
         <span id="timerDisplay" class="timer-badge hidden" aria-live="polite">⏱ 60:00</span>
-        <button id="globalLangToggle" class="pill-btn" type="button" title="Englische Übersetzung ein-/ausblenden">
+        <button id="globalLangToggle" class="pill-btn" type="button" title="Englische Übersetzung ein-/ausblenden" data-i18n-title="global.langTitle">
           🌐 <span id="globalLangLabel">EN Übersetzung: AUS</span>
         </button>
-        <button id="headerHomeBtn" class="pill-btn hidden" type="button">
+        <button id="headerHomeBtn" class="pill-btn hidden" type="button" data-i18n="global.backHome">
           ← Startseite
         </button>
       </div>
@@ -1843,52 +1843,52 @@
          ====================================================================== -->
     <section id="homeView">
       <div class="menu-hero">
-        <p class="menu-kicker">Einbürgerungstest Deutschland</p>
-        <h1 class="menu-heading">Was möchten Sie heute üben?</h1>
-        <p class="menu-intro">460 Fragen, 20 Übungstests und 16 Bundesländer – alles an einem Ort.</p>
+        <p class="menu-kicker" data-i18n="home.kicker">Einbürgerungstest Deutschland</p>
+        <h1 class="menu-heading" data-i18n="home.heading">Was möchten Sie heute üben?</h1>
+        <p class="menu-intro" data-i18n="home.intro">460 Fragen, 20 Übungstests und 16 Bundesländer – alles an einem Ort.</p>
       </div>
 
       <div class="menu-grid">
         <button class="menu-tile menu-tile--test" data-target="tests" type="button">
           <span class="menu-icon" aria-hidden="true">📝</span>
-          <span class="menu-tile-title">Test machen</span>
-          <span class="menu-tile-sub">20 Übungstests und eine Zufalls-Prüfung</span>
-          <span class="menu-tile-meta">33 Fragen · 60 Minuten · 17 zum Bestehen</span>
+          <span class="menu-tile-title" data-i18n="home.tests.title">Test machen</span>
+          <span class="menu-tile-sub" data-i18n="home.tests.sub">20 Übungstests und eine Zufalls-Prüfung</span>
+          <span class="menu-tile-meta" data-i18n="home.tests.meta">33 Fragen · 60 Minuten · 17 zum Bestehen</span>
         </button>
 
         <button class="menu-tile menu-tile--state" data-target="states" type="button">
           <span class="menu-icon" aria-hidden="true">🗺️</span>
-          <span class="menu-tile-title">Landesfragen</span>
-          <span class="menu-tile-sub">Bundesland wählen und die 10 Landesfragen üben</span>
-          <span class="menu-tile-meta">16 Bundesländer · 10 Fragen je Land</span>
+          <span class="menu-tile-title" data-i18n="home.states.title">Landesfragen</span>
+          <span class="menu-tile-sub" data-i18n="home.states.sub">Bundesland wählen und die 10 Landesfragen üben</span>
+          <span class="menu-tile-meta" data-i18n="home.states.meta">16 Bundesländer · 10 Fragen je Land</span>
         </button>
 
         <button class="menu-tile menu-tile--about" data-target="about" type="button">
           <span class="menu-icon" aria-hidden="true">📖</span>
-          <span class="menu-tile-title">Über den Test</span>
-          <span class="menu-tile-sub">Ablauf, Themen und Bewertung der Prüfung</span>
-          <span class="menu-tile-meta">30 Bundesfragen + 3 Landesfragen</span>
+          <span class="menu-tile-title" data-i18n="home.about.title">Über den Test</span>
+          <span class="menu-tile-sub" data-i18n="home.about.sub">Ablauf, Themen und Bewertung der Prüfung</span>
+          <span class="menu-tile-meta" data-i18n="home.about.meta">30 Bundesfragen + 3 Landesfragen</span>
         </button>
 
         <button class="menu-tile menu-tile--vocab" data-target="vocabulary" type="button">
           <span class="menu-icon" aria-hidden="true">🗣️</span>
-          <span class="menu-tile-title">Neue Wörter für B1</span>
-          <span class="menu-tile-sub">Wichtige Begriffe aus Alltag, Verwaltung und Politik</span>
-          <span class="menu-tile-meta">100 Wörter · Deutsch &amp; Englisch</span>
+          <span class="menu-tile-title" data-i18n="home.vocab.title">Neue Wörter für B1</span>
+          <span class="menu-tile-sub" data-i18n="home.vocab.sub">Wichtige Begriffe aus Alltag, Verwaltung und Politik</span>
+          <span class="menu-tile-meta" data-i18n="home.vocab.meta">100 Wörter · Deutsch &amp; Englisch</span>
         </button>
 
         <button class="menu-tile menu-tile--browse menu-tile--full" data-target="browse" type="button">
           <span class="menu-icon" aria-hidden="true">📚</span>
-          <span class="menu-tile-title">Alle Fragen</span>
-          <span class="menu-tile-sub">Alle 460 Fragen mit markierten Antworten und Erläuterungen</span>
-          <span class="menu-tile-meta">300 Bundesfragen + 160 Landesfragen</span>
+          <span class="menu-tile-title" data-i18n="home.browse.title">Alle Fragen</span>
+          <span class="menu-tile-sub" data-i18n="home.browse.sub">Alle 460 Fragen mit markierten Antworten und Erläuterungen</span>
+          <span class="menu-tile-meta" data-i18n="home.browse.meta">300 Bundesfragen + 160 Landesfragen</span>
         </button>
       </div>
 
-      <div class="home-progress" aria-label="Lernfortschritt">
-        <span>✓ <strong id="homeTestsCompleted">0</strong>/20 Tests <span id="homeStateName">(Sachsen)</span></span>
-        <span>📊 <strong id="homeCoverage">0%</strong> Fragen gesehen</span>
-        <span>🗺️ <strong id="homeStateResults">0</strong>/16 Bundesländer geübt</span>
+      <div class="home-progress" aria-label="Lernfortschritt" data-i18n-aria="home.progress.aria">
+        <span>✓ <strong id="homeTestsCompleted">0</strong><span data-i18n="home.progress.tests">/20 Tests</span> <span id="homeStateName">(Sachsen)</span></span>
+        <span>📊 <strong id="homeCoverage">0%</strong> <span data-i18n="home.progress.seen">Fragen gesehen</span></span>
+        <span>🗺️ <strong id="homeStateResults">0</strong><span data-i18n="home.progress.states">/16 Bundesländer geübt</span></span>
       </div>
     </section>
 
@@ -1897,19 +1897,19 @@
          ====================================================================== -->
     <section id="testsView" class="hidden">
       <div class="page-head">
-        <button class="back-link" data-target="home" type="button">← Startseite</button>
-        <h1 class="page-title">Test machen</h1>
-        <p class="page-subtitle">20 feste Übungstests und eine Zufalls-Prüfung mit je 33 Fragen.</p>
+        <button class="back-link" data-target="home" type="button" data-i18n="global.backHome">← Startseite</button>
+        <h1 class="page-title" data-i18n="tests.page.title">Test machen</h1>
+        <p class="page-subtitle" data-i18n="tests.page.subtitle">20 feste Übungstests und eine Zufalls-Prüfung mit je 33 Fragen.</p>
       </div>
       <div class="hero-card">
         <div class="hero-top">
           <div>
-            <h1 class="hero-title">Prüfungssimulation nach offiziellem BAMF-Schlüssel</h1>
-            <p class="hero-desc">
+            <h1 class="hero-title" data-i18n="tests.hero.title">Prüfungssimulation nach offiziellem BAMF-Schlüssel</h1>
+            <p class="hero-desc" data-i18n-html="tests.hero.desc">
               Alle <strong>300 Bundesfragen</strong> und <strong>10 Landesfragen je Bundesland</strong> (insgesamt 460 Fragen) sind enthalten. Jeder der <strong>20 festen Übungstests</strong> sowie die <strong>Zufalls-Prüfung</strong> bildet die Struktur der offiziellen Prüfung ab. Zum Bestehen benötigen Sie mindestens <strong>17 von 33 richtigen Antworten</strong>.
             </p>
           </div>
-          <button id="startRandomBtn" class="btn-primary" style="width:auto; padding:0.72rem 1.2rem;" type="button">
+          <button id="startRandomBtn" class="btn-primary" style="width:auto; padding:0.72rem 1.2rem;" type="button" data-i18n="tests.random.btn">
             🎲 Zufalls-Prüfung starten
           </button>
         </div>
@@ -1917,29 +1917,29 @@
         <div class="blueprint-grid">
           <div class="blueprint-item">
             <div>
-              <span class="blueprint-label">Leben in der Demokratie</span>
-              <span class="blueprint-sub">Grundgesetz, Wahlen, Staat</span>
+              <span class="blueprint-label" data-i18n="topic.democracy.label">Leben in der Demokratie</span>
+              <span class="blueprint-sub" data-i18n="topic.democracy.sub">Grundgesetz, Wahlen, Staat</span>
             </div>
             <span class="blueprint-count">18</span>
           </div>
           <div class="blueprint-item">
             <div>
-              <span class="blueprint-label">Geschichte &amp; Verantwortung</span>
-              <span class="blueprint-sub">NS-Zeit, DDR, Wiedervereinigung</span>
+              <span class="blueprint-label" data-i18n="topic.history.label">Geschichte &amp; Verantwortung</span>
+              <span class="blueprint-sub" data-i18n="topic.history.sub">NS-Zeit, DDR, Wiedervereinigung</span>
             </div>
             <span class="blueprint-count">9</span>
           </div>
           <div class="blueprint-item">
             <div>
-              <span class="blueprint-label">Mensch und Gesellschaft</span>
-              <span class="blueprint-sub">Alltag, Religion, Zusammenleben</span>
+              <span class="blueprint-label" data-i18n="topic.society.label">Mensch und Gesellschaft</span>
+              <span class="blueprint-sub" data-i18n="topic.society.sub">Alltag, Religion, Zusammenleben</span>
             </div>
             <span class="blueprint-count">3</span>
           </div>
           <div class="blueprint-item">
             <div>
               <span class="blueprint-label" id="blueprintStateName">Bundesland (Sachsen)</span>
-              <span class="blueprint-sub">Landespolitik, Wappen, Geografie</span>
+              <span class="blueprint-sub" data-i18n="topic.state.sub">Landespolitik, Wappen, Geografie</span>
             </div>
             <span class="blueprint-count">3</span>
           </div>
@@ -1948,15 +1948,15 @@
         <!-- Coverage Progress Panel -->
         <div class="coverage-panel">
           <div class="coverage-header">
-            <span class="coverage-title">📊 Lernfortschritt &amp; Fragenabdeckung (gespeichert im Browser)</span>
-            <button id="resetProgressBtn" class="pill-btn" style="padding:0.3rem 0.65rem; font-size:0.75rem;" type="button">
+            <span class="coverage-title" data-i18n="tests.coverage.title">📊 Lernfortschritt &amp; Fragenabdeckung (gespeichert im Browser)</span>
+            <button id="resetProgressBtn" class="pill-btn" style="padding:0.3rem 0.65rem; font-size:0.75rem;" type="button" data-i18n="tests.coverage.reset">
               Verlauf zurücksetzen
             </button>
           </div>
           <div class="coverage-bars">
             <div class="cov-bar-group">
               <label>
-                <span>Allgemeiner Fragenpool (Demokratie, Geschichte, Gesellschaft)</span>
+                <span data-i18n="tests.coverage.general">Allgemeiner Fragenpool (Demokratie, Geschichte, Gesellschaft)</span>
                 <span id="generalCoverageText">0 / 0 gesehen (0%)</span>
               </label>
               <div class="cov-track">
@@ -1977,16 +1977,16 @@
 
         <div class="config-bar">
           <div class="field-group">
-            <label class="field-label" for="stateSelect">1. Bundesland auswählen</label>
+            <label class="field-label" for="stateSelect" data-i18n="tests.config.state">1. Bundesland auswählen</label>
             <select id="stateSelect" class="select-input"></select>
           </div>
 
           <div class="switch-row">
             <div>
-              <span class="switch-label">Ungesehene Fragen bevorzugen</span>
-              <span class="switch-sub">Gilt für die Zufalls-Prüfung (Tests 1–20 sind fest)</span>
+              <span class="switch-label" data-i18n="tests.config.unseen">Ungesehene Fragen bevorzugen</span>
+              <span class="switch-sub" data-i18n="tests.config.unseenSub">Gilt für die Zufalls-Prüfung (Tests 1–20 sind fest)</span>
             </div>
-            <label class="switch" aria-label="Ungesehene Fragen bevorzugen">
+            <label class="switch" aria-label="Ungesehene Fragen bevorzugen" data-i18n-aria="tests.config.unseenAria">
               <input type="checkbox" id="unseenOnlyToggle" checked />
               <span class="slider"></span>
             </label>
@@ -1994,10 +1994,10 @@
 
           <div class="switch-row">
             <div>
-              <span class="switch-label">60-Minuten-Prüfungstimer</span>
-              <span class="switch-sub">Offizielles Zeitlimit simulieren</span>
+              <span class="switch-label" data-i18n="tests.config.timer">60-Minuten-Prüfungstimer</span>
+              <span class="switch-sub" data-i18n="tests.config.timerSub">Offizielles Zeitlimit simulieren</span>
             </div>
-            <label class="switch" aria-label="60-Minuten-Timer aktivieren">
+            <label class="switch" aria-label="60-Minuten-Timer aktivieren" data-i18n-aria="tests.config.timerAria">
               <input type="checkbox" id="timerToggle" checked />
               <span class="slider"></span>
             </label>
@@ -2006,7 +2006,7 @@
       </div>
 
       <div class="section-header">
-        <h2 class="section-title">20 Feste Übungstests (Übungstest 1 – 20)</h2>
+        <h2 class="section-title" data-i18n="tests.section.title">20 Feste Übungstests (Übungstest 1 – 20)</h2>
         <span style="font-size:0.84rem; color:var(--text-muted);" id="completedSummary">0 von 20 Tests abgeschlossen</span>
       </div>
 
@@ -2018,95 +2018,95 @@
          ====================================================================== -->
     <section id="aboutView" class="hidden">
       <div class="page-head">
-        <button class="back-link" data-target="home" type="button">← Startseite</button>
-        <h1 class="page-title">Über den Einbürgerungstest</h1>
-        <p class="page-subtitle">Was in der Prüfung gefragt wird – und wie diese App beim Üben hilft.</p>
+        <button class="back-link" data-target="home" type="button" data-i18n="global.backHome">← Startseite</button>
+        <h1 class="page-title" data-i18n="about.title">Über den Einbürgerungstest</h1>
+        <p class="page-subtitle" data-i18n="about.subtitle">Was in der Prüfung gefragt wird – und wie diese App beim Üben hilft.</p>
       </div>
 
       <div class="stat-grid">
         <div class="stat-card">
           <span class="stat-value">33</span>
-          <span class="stat-label">Fragen</span>
+          <span class="stat-label" data-i18n="about.stat.questions">Fragen</span>
         </div>
         <div class="stat-card">
           <span class="stat-value">60</span>
-          <span class="stat-label">Minuten</span>
+          <span class="stat-label" data-i18n="about.stat.minutes">Minuten</span>
         </div>
         <div class="stat-card">
           <span class="stat-value">17 / 33</span>
-          <span class="stat-label">zum Bestehen</span>
+          <span class="stat-label" data-i18n="about.stat.pass">zum Bestehen</span>
         </div>
         <div class="stat-card">
           <span class="stat-value">460</span>
-          <span class="stat-label">Fragen im Katalog</span>
+          <span class="stat-label" data-i18n="about.stat.catalogue">Fragen im Katalog</span>
         </div>
       </div>
 
       <div class="info-card">
-        <h2>So ist die Prüfung aufgebaut</h2>
+        <h2 data-i18n="about.structure.title">So ist die Prüfung aufgebaut</h2>
         <ul class="info-list">
-          <li>Die Prüfung besteht aus <strong>33 Fragen</strong>: <strong>30 Bundesfragen</strong> und <strong>3 Fragen zu Ihrem Bundesland</strong>.</li>
-          <li>Zu jeder Frage gibt es <strong>vier Antworten</strong>. Genau eine Antwort ist richtig.</li>
-          <li>Für die Bearbeitung haben Sie <strong>60 Minuten</strong> Zeit.</li>
-          <li>Bestanden ist der Test mit mindestens <strong>17 von 33</strong> richtigen Antworten.</li>
-          <li>Die Fragen stammen aus dem offiziellen Gesamtfragenkatalog: <strong>300 Bundesfragen</strong> und <strong>10 Landesfragen je Bundesland</strong>.</li>
+          <li data-i18n-html="about.structure.li1">Die Prüfung besteht aus <strong>33 Fragen</strong>: <strong>30 Bundesfragen</strong> und <strong>3 Fragen zu Ihrem Bundesland</strong>.</li>
+          <li data-i18n-html="about.structure.li2">Zu jeder Frage gibt es <strong>vier Antworten</strong>. Genau eine Antwort ist richtig.</li>
+          <li data-i18n-html="about.structure.li3">Für die Bearbeitung haben Sie <strong>60 Minuten</strong> Zeit.</li>
+          <li data-i18n-html="about.structure.li4">Bestanden ist der Test mit mindestens <strong>17 von 33</strong> richtigen Antworten.</li>
+          <li data-i18n-html="about.structure.li5">Die Fragen stammen aus dem offiziellen Gesamtfragenkatalog: <strong>300 Bundesfragen</strong> und <strong>10 Landesfragen je Bundesland</strong>.</li>
         </ul>
       </div>
 
       <div class="info-card">
-        <h2>Themen der Prüfung</h2>
-        <p>Die 30 Bundesfragen stammen aus drei Themenbereichen. Die Übungstests dieser App enthalten:</p>
+        <h2 data-i18n="about.topics.title">Themen der Prüfung</h2>
+        <p data-i18n="about.topics.intro">Die 30 Bundesfragen stammen aus drei Themenbereichen. Die Übungstests dieser App enthalten:</p>
         <div class="blueprint-grid">
           <div class="blueprint-item">
             <div>
-              <span class="blueprint-label">Leben in der Demokratie</span>
-              <span class="blueprint-sub">Grundgesetz, Wahlen, Staat</span>
+              <span class="blueprint-label" data-i18n="topic.democracy.label">Leben in der Demokratie</span>
+              <span class="blueprint-sub" data-i18n="topic.democracy.sub">Grundgesetz, Wahlen, Staat</span>
             </div>
             <span class="blueprint-count">18</span>
           </div>
           <div class="blueprint-item">
             <div>
-              <span class="blueprint-label">Geschichte &amp; Verantwortung</span>
-              <span class="blueprint-sub">NS-Zeit, DDR, Wiedervereinigung</span>
+              <span class="blueprint-label" data-i18n="topic.history.label">Geschichte &amp; Verantwortung</span>
+              <span class="blueprint-sub" data-i18n="topic.history.sub">NS-Zeit, DDR, Wiedervereinigung</span>
             </div>
             <span class="blueprint-count">9</span>
           </div>
           <div class="blueprint-item">
             <div>
-              <span class="blueprint-label">Mensch und Gesellschaft</span>
-              <span class="blueprint-sub">Alltag, Religion, Zusammenleben</span>
+              <span class="blueprint-label" data-i18n="topic.society.label">Mensch und Gesellschaft</span>
+              <span class="blueprint-sub" data-i18n="topic.society.sub">Alltag, Religion, Zusammenleben</span>
             </div>
             <span class="blueprint-count">3</span>
           </div>
           <div class="blueprint-item">
             <div>
-              <span class="blueprint-label">Fragen zum Bundesland</span>
-              <span class="blueprint-sub">Landespolitik, Wappen, Geografie</span>
+              <span class="blueprint-label" data-i18n="topic.state.label">Fragen zum Bundesland</span>
+              <span class="blueprint-sub" data-i18n="topic.state.sub">Landespolitik, Wappen, Geografie</span>
             </div>
             <span class="blueprint-count">3</span>
           </div>
         </div>
-        <p class="info-note">Die Aufteilung 18 / 9 / 3 + 3 ist der Aufbau der Übungstests in dieser App. Die offizielle Prüfung stellt 30 Bundesfragen und 3 Landesfragen.</p>
+        <p class="info-note" data-i18n="about.topics.note">Die Aufteilung 18 / 9 / 3 + 3 ist der Aufbau der Übungstests in dieser App. Die offizielle Prüfung stellt 30 Bundesfragen und 3 Landesfragen.</p>
       </div>
 
       <div class="info-card">
-        <h2>Was diese App bietet</h2>
+        <h2 data-i18n="about.features.title">Was diese App bietet</h2>
         <ul class="info-list">
-          <li><strong>20 feste Übungstests</strong> und eine <strong>Zufalls-Prüfung</strong> mit je 33 Fragen.</li>
-          <li><strong>Landesfragen</strong> für alle 16 Bundesländer – alle 10 Fragen je Land.</li>
-          <li><strong>Alle 460 Fragen</strong> zum Nachschlagen, mit markierter Antwort und Erläuterung.</li>
-          <li><strong>100 B1-Wörter</strong> aus Politik, Verwaltung und Alltag.</li>
-          <li>Deutsch und Englisch, Bilder, Timer und Lernfortschritt direkt im Browser.</li>
+          <li data-i18n-html="about.features.li1"><strong>20 feste Übungstests</strong> und eine <strong>Zufalls-Prüfung</strong> mit je 33 Fragen.</li>
+          <li data-i18n-html="about.features.li2"><strong>Landesfragen</strong> für alle 16 Bundesländer – alle 10 Fragen je Land.</li>
+          <li data-i18n-html="about.features.li3"><strong>Alle 460 Fragen</strong> zum Nachschlagen, mit markierter Antwort und Erläuterung.</li>
+          <li data-i18n-html="about.features.li4"><strong>100 B1-Wörter</strong> aus Politik, Verwaltung und Alltag.</li>
+          <li data-i18n="about.features.li5">Deutsch und Englisch, Bilder, Timer und Lernfortschritt direkt im Browser.</li>
         </ul>
       </div>
 
       <div class="info-card">
-        <h2>Quelle und Hinweis</h2>
-        <p>
+        <h2 data-i18n="about.source.title">Quelle und Hinweis</h2>
+        <p data-i18n="about.source.text">
           Wortlaut: BAMF-Gesamtfragenkatalog „Leben in Deutschland“ und „Einbürgerungstest“, Stand 07.05.2025.
           Diese App ist eine unabhängige Lernhilfe und kein offizielles Angebot des BAMF.
         </p>
-        <a class="btn-secondary info-link" href="https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.html?nn=284310" target="_blank" rel="noopener">
+        <a class="btn-secondary info-link" href="https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.html?nn=284310" target="_blank" rel="noopener" data-i18n="about.source.link">
           Zum BAMF-Fragenkatalog →
         </a>
       </div>
@@ -2117,28 +2117,28 @@
          ====================================================================== -->
     <section id="vocabularyView" class="hidden">
       <div class="page-head">
-        <button class="back-link" data-target="home" type="button">← Startseite</button>
-        <h1 class="page-title">Neue Wörter für B1</h1>
-        <p class="page-subtitle">Begriffe aus Politik, Verwaltung und Alltag, die im Test und im deutschen Alltag oft vorkommen.</p>
+        <button class="back-link" data-target="home" type="button" data-i18n="global.backHome">← Startseite</button>
+        <h1 class="page-title" data-i18n="vocab.page.title">Neue Wörter für B1</h1>
+        <p class="page-subtitle" data-i18n="vocab.page.subtitle">Begriffe aus Politik, Verwaltung und Alltag, die im Test und im deutschen Alltag oft vorkommen.</p>
       </div>
 
       <div class="toolbar-card">
         <label class="search-box">
           <span aria-hidden="true">🔎</span>
-          <input id="vocabSearch" type="search" placeholder="Wort oder Übersetzung suchen …" autocomplete="off" />
+          <input id="vocabSearch" type="search" placeholder="Wort oder Übersetzung suchen …" data-i18n-placeholder="vocab.search.placeholder" autocomplete="off" />
         </label>
-        <div class="filter-chips" id="vocabThemes" role="group" aria-label="Themen">
-          <button class="chip active" data-vocab-theme="all" type="button">Alle</button>
-          <button class="chip" data-vocab-theme="state" type="button">Staat &amp; Politik</button>
-          <button class="chip" data-vocab-theme="admin" type="button">Verwaltung &amp; Dokumente</button>
-          <button class="chip" data-vocab-theme="work" type="button">Arbeit &amp; Soziales</button>
-          <button class="chip" data-vocab-theme="housing" type="button">Wohnen &amp; Geld</button>
-          <button class="chip" data-vocab-theme="health" type="button">Gesundheit</button>
-          <button class="chip" data-vocab-theme="family" type="button">Familie &amp; Bildung</button>
+        <div class="filter-chips" id="vocabThemes" role="group" aria-label="Themen" data-i18n-aria="vocab.theme.aria">
+          <button class="chip active" data-vocab-theme="all" type="button" data-i18n="vocab.theme.all">Alle</button>
+          <button class="chip" data-vocab-theme="state" type="button" data-i18n="vocab.theme.state">Staat &amp; Politik</button>
+          <button class="chip" data-vocab-theme="admin" type="button" data-i18n="vocab.theme.admin">Verwaltung &amp; Dokumente</button>
+          <button class="chip" data-vocab-theme="work" type="button" data-i18n="vocab.theme.work">Arbeit &amp; Soziales</button>
+          <button class="chip" data-vocab-theme="housing" type="button" data-i18n="vocab.theme.housing">Wohnen &amp; Geld</button>
+          <button class="chip" data-vocab-theme="health" type="button" data-i18n="vocab.theme.health">Gesundheit</button>
+          <button class="chip" data-vocab-theme="family" type="button" data-i18n="vocab.theme.family">Familie &amp; Bildung</button>
         </div>
       </div>
 
-      <p class="result-count" id="vocabCount">Wörter werden geladen …</p>
+      <p class="result-count" id="vocabCount" data-i18n="vocab.loading">Wörter werden geladen …</p>
       <div id="vocabList" class="vocab-grid"></div>
     </section>
 
@@ -2147,12 +2147,12 @@
          ====================================================================== -->
     <section id="statesView" class="hidden">
       <div class="page-head">
-        <button class="back-link" data-target="home" type="button">← Startseite</button>
-        <h1 class="page-title">Landesfragen</h1>
-        <p class="page-subtitle">Wählen Sie Ihr Bundesland. Sie üben dann alle 10 Landesfragen dieses Bundeslandes.</p>
+        <button class="back-link" data-target="home" type="button" data-i18n="global.backHome">← Startseite</button>
+        <h1 class="page-title" data-i18n="states.page.title">Landesfragen</h1>
+        <p class="page-subtitle" data-i18n="states.page.subtitle">Wählen Sie Ihr Bundesland. Sie üben dann alle 10 Landesfragen dieses Bundeslandes.</p>
       </div>
 
-      <div class="info-note state-note">
+      <div class="info-note state-note" data-i18n="states.note">
         Das ausgewählte Bundesland wird auch für die 3 Landesfragen in den 33er-Übungstests verwendet.
       </div>
 
@@ -2164,38 +2164,38 @@
          ====================================================================== -->
     <section id="browseView" class="hidden">
       <div class="page-head">
-        <button class="back-link" data-target="home" type="button">← Startseite</button>
-        <h1 class="page-title">Alle Fragen</h1>
-        <p class="page-subtitle">Alle 460 Fragen mit markierter richtiger Antwort und Erläuterung – zum Lesen und Wiederholen.</p>
+        <button class="back-link" data-target="home" type="button" data-i18n="global.backHome">← Startseite</button>
+        <h1 class="page-title" data-i18n="browse.page.title">Alle Fragen</h1>
+        <p class="page-subtitle" data-i18n="browse.page.subtitle">Alle 460 Fragen mit markierter richtiger Antwort und Erläuterung – zum Lesen und Wiederholen.</p>
       </div>
 
       <div class="toolbar-card">
         <label class="search-box">
           <span aria-hidden="true">🔎</span>
-          <input id="browseSearch" type="search" placeholder="Frage, Antwort oder Erläuterung suchen …" autocomplete="off" />
+          <input id="browseSearch" type="search" placeholder="Frage, Antwort oder Erläuterung suchen …" data-i18n-placeholder="browse.search.placeholder" autocomplete="off" />
         </label>
 
-        <div class="filter-chips" id="browseTopics" role="group" aria-label="Themen">
-          <button class="chip active" data-browse-topic="all" type="button">Alle (460)</button>
-          <button class="chip" data-browse-topic="democracy" type="button">Demokratie (150)</button>
-          <button class="chip" data-browse-topic="history" type="button">Geschichte (100)</button>
-          <button class="chip" data-browse-topic="society" type="button">Gesellschaft (50)</button>
-          <button class="chip" data-browse-topic="state" type="button">Landesfragen (160)</button>
+        <div class="filter-chips" id="browseTopics" role="group" aria-label="Themen" data-i18n-aria="browse.topics.aria">
+          <button class="chip active" data-browse-topic="all" type="button" data-i18n="browse.filter.all">Alle (460)</button>
+          <button class="chip" data-browse-topic="democracy" type="button" data-i18n="browse.filter.democracy">Demokratie (150)</button>
+          <button class="chip" data-browse-topic="history" type="button" data-i18n="browse.filter.history">Geschichte (100)</button>
+          <button class="chip" data-browse-topic="society" type="button" data-i18n="browse.filter.society">Gesellschaft (50)</button>
+          <button class="chip" data-browse-topic="state" type="button" data-i18n="browse.filter.state">Landesfragen (160)</button>
         </div>
 
         <div class="toolbar-row">
           <label class="select-inline">
-            <span class="field-label">Bundesland (nur Landesfragen)</span>
+            <span class="field-label" data-i18n="browse.state.label">Bundesland (nur Landesfragen)</span>
             <select id="browseStateSelect" class="select-input" disabled></select>
           </label>
           <label class="toggle-inline">
             <input type="checkbox" id="browseAnswersToggle" checked />
-            <span>Antworten anzeigen</span>
+            <span data-i18n="browse.answers">Antworten anzeigen</span>
           </label>
         </div>
       </div>
 
-      <p class="result-count" id="browseCount">Fragen werden geladen …</p>
+      <p class="result-count" id="browseCount" data-i18n="browse.loading">Fragen werden geladen …</p>
       <div id="browseList" class="browse-list"></div>
     </section>
 
@@ -2240,24 +2240,24 @@
         </div>
 
         <aside class="sidebar-card">
-          <div class="sidebar-title">Fragenübersicht (1–33)</div>
+          <div class="sidebar-title" id="sidebarTitle">Fragenübersicht (1–33)</div>
           <div class="sidebar-sub" id="answeredCountText">0 von 33 beantwortet</div>
 
           <div id="questionNavGrid" class="q-grid-nav"></div>
 
           <div class="legend-row">
             <span class="legend-item">
-              <span class="legend-swatch" style="background:var(--accent); border-color:var(--accent);"></span> Aktuell
+              <span class="legend-swatch" style="background:var(--accent); border-color:var(--accent);"></span> <span data-i18n="exam.legend.current">Aktuell</span>
             </span>
             <span class="legend-item">
-              <span class="legend-swatch" style="background:var(--accent-soft); border-color:var(--accent-border);"></span> Beantwortet
+              <span class="legend-swatch" style="background:var(--accent-soft); border-color:var(--accent-border);"></span> <span data-i18n="exam.legend.answered">Beantwortet</span>
             </span>
             <span class="legend-item">
-              <span class="legend-swatch" style="background:#f59e0b; border-color:#f59e0b; border-radius:50%;"></span> Markiert
+              <span class="legend-swatch" style="background:#f59e0b; border-color:#f59e0b; border-radius:50%;"></span> <span data-i18n="exam.legend.flagged">Markiert</span>
             </span>
           </div>
 
-          <button id="submitExamBtn" class="btn-success" style="width:100%;" type="button">
+          <button id="submitExamBtn" class="btn-success" style="width:100%;" type="button" data-i18n="exam.submit">
             ✓ Test abgeben &amp; auswerten
           </button>
         </aside>
@@ -2305,42 +2305,43 @@
       <div id="modalTitle" class="modal-title">Test abgeben?</div>
       <div id="modalBody" class="modal-body">Möchten Sie den Test jetzt auswerten?</div>
       <div class="modal-actions">
-        <button id="modalCancelBtn" class="btn-secondary" type="button">Abbrechen</button>
-        <button id="modalConfirmBtn" class="btn-primary" style="width:auto;" type="button">Bestätigen</button>
+        <button id="modalCancelBtn" class="btn-secondary" type="button" data-i18n="exam.modal.cancel">Abbrechen</button>
+        <button id="modalConfirmBtn" class="btn-primary" style="width:auto;" type="button" data-i18n="exam.modal.confirm">Bestätigen</button>
       </div>
     </div>
   </div>
 
   <footer>
-    Einbürgerungstest Übungsportal · 300 Bundesfragen + 10 Landesfragen je Bundesland (460 Fragen).<br />
-    Wortlaut: BAMF-Gesamtfragenkatalog (Stand 07.05.2025) · Antworten, englische Übersetzungen und Erläuterungen: Abdullah Butt, CC BY-NC 4.0.<br />
-    Hinweis: Dies ist eine unabhängige Lernanwendung zur Prüfungsvorbereitung.
+    <span data-i18n="global.footer1">Einbürgerungstest Übungsportal · 300 Bundesfragen + 10 Landesfragen je Bundesland (460 Fragen).</span><br />
+    <span data-i18n="global.footer2">Wortlaut: BAMF-Gesamtfragenkatalog (Stand 07.05.2025) · Antworten, englische Übersetzungen und Erläuterungen: Abdullah Butt, CC BY-NC 4.0.</span><br />
+    <span data-i18n="global.footer3">Hinweis: Dies ist eine unabhängige Lernanwendung zur Prüfungsvorbereitung.</span>
   </footer>
 
   <script src="data/questions.js"></script>
   <script src="data/vocabulary.js"></script>
+  <script src="data/i18n.js"></script>
 
   <script>
     /* ==========================================================================
        1. FEDERAL STATES (ALL 16 BUNDESLÄNDER)
        ========================================================================== */
     const BUNDESLAENDER = [
-      { code: "BW", name: "Baden-Württemberg" },
-      { code: "BY", name: "Bayern" },
-      { code: "BE", name: "Berlin" },
-      { code: "BB", name: "Brandenburg" },
-      { code: "HB", name: "Bremen" },
-      { code: "HH", name: "Hamburg" },
-      { code: "HE", name: "Hessen" },
-      { code: "MV", name: "Mecklenburg-Vorpommern" },
-      { code: "NI", name: "Niedersachsen" },
-      { code: "NW", name: "Nordrhein-Westfalen" },
-      { code: "RP", name: "Rheinland-Pfalz" },
-      { code: "SL", name: "Saarland" },
-      { code: "SN", name: "Sachsen" },
-      { code: "ST", name: "Sachsen-Anhalt" },
-      { code: "SH", name: "Schleswig-Holstein" },
-      { code: "TH", name: "Thüringen" }
+      { code: "BW", name: "Baden-Württemberg", nameEn: "Baden-Württemberg" },
+      { code: "BY", name: "Bayern", nameEn: "Bavaria" },
+      { code: "BE", name: "Berlin", nameEn: "Berlin" },
+      { code: "BB", name: "Brandenburg", nameEn: "Brandenburg" },
+      { code: "HB", name: "Bremen", nameEn: "Bremen" },
+      { code: "HH", name: "Hamburg", nameEn: "Hamburg" },
+      { code: "HE", name: "Hessen", nameEn: "Hesse" },
+      { code: "MV", name: "Mecklenburg-Vorpommern", nameEn: "Mecklenburg-Western Pomerania" },
+      { code: "NI", name: "Niedersachsen", nameEn: "Lower Saxony" },
+      { code: "NW", name: "Nordrhein-Westfalen", nameEn: "North Rhine-Westphalia" },
+      { code: "RP", name: "Rheinland-Pfalz", nameEn: "Rhineland-Palatinate" },
+      { code: "SL", name: "Saarland", nameEn: "Saarland" },
+      { code: "SN", name: "Sachsen", nameEn: "Saxony" },
+      { code: "ST", name: "Sachsen-Anhalt", nameEn: "Saxony-Anhalt" },
+      { code: "SH", name: "Schleswig-Holstein", nameEn: "Schleswig-Holstein" },
+      { code: "TH", name: "Thüringen", nameEn: "Thuringia" }
     ];
 
     /* ==========================================================================
@@ -2432,8 +2433,65 @@
       browseSearch: "",
       browseAnswersVisible: true,
       vocabSearch: "",
-      vocabTheme: "all"
+      vocabTheme: "all",
+      lastResult: null
     };
+
+    function t(key, vars = {}) {
+      const lang = state.showEnglishGlobal ? "en" : "de";
+      const dictionaries = window.I18N || {};
+      const active = dictionaries[lang] || {};
+      const fallback = dictionaries.de || {};
+      let value = active[key] ?? fallback[key] ?? key;
+      Object.keys(vars).forEach(name => {
+        value = value.split(`{${name}}`).join(String(vars[name]));
+      });
+      return value;
+    }
+
+    function stateName(code) {
+      const bl = BUNDESLAENDER.find(item => item.code === code) || BUNDESLAENDER[12];
+      return state.showEnglishGlobal ? (bl.nameEn || bl.name) : bl.name;
+    }
+
+    function categoryLabel(categoryKey, stateCode) {
+      const code = stateCode || state.selectedState;
+      if (categoryKey === "state") return t("category.state", { state: stateName(code) });
+      return t(`category.${categoryKey}`);
+    }
+
+    function applyLanguage() {
+      document.querySelectorAll("[data-i18n]").forEach(element => {
+        element.textContent = t(element.dataset.i18n);
+      });
+      document.querySelectorAll("[data-i18n-html]").forEach(element => {
+        element.innerHTML = t(element.dataset.i18nHtml);
+      });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
+        element.placeholder = t(element.dataset.i18nPlaceholder);
+      });
+      document.querySelectorAll("[data-i18n-aria]").forEach(element => {
+        element.setAttribute("aria-label", t(element.dataset.i18nAria));
+      });
+      document.querySelectorAll("[data-i18n-title]").forEach(element => {
+        element.title = t(element.dataset.i18nTitle);
+      });
+      document.title = t("app.title");
+    }
+
+    function currentViewName() {
+      return ["home", "tests", "about", "vocabulary", "states", "browse", "exam", "results"]
+        .find(name => {
+          const element = els[`${name}View`];
+          return element && !element.classList.contains("hidden");
+        }) || "home";
+    }
+
+    function updateHeaderBackLabel() {
+      const view = currentViewName();
+      els.headerHomeBtn.textContent =
+        view === "exam" ? t("global.leaveExam") : view === "results" ? t("global.back") : t("global.backHome");
+    }
 
     function loadPersistedState() {
       try {
@@ -2631,6 +2689,7 @@
       answeredCountText: document.getElementById("answeredCountText"),
       questionNavGrid: document.getElementById("questionNavGrid"),
       submitExamBtn: document.getElementById("submitExamBtn"),
+      sidebarTitle: document.getElementById("sidebarTitle"),
       verdictBadge: document.getElementById("verdictBadge"),
       scoreHeadline: document.getElementById("scoreHeadline"),
       scoreSubtext: document.getElementById("scoreSubtext"),
@@ -2664,17 +2723,22 @@
       modalConfirmBtn: document.getElementById("modalConfirmBtn")
     };
 
+    function populateStateSelect() {
+      if (!els.stateSelect) return;
+      els.stateSelect.innerHTML = "";
+      BUNDESLAENDER.forEach(bl => {
+        const option = document.createElement("option");
+        option.value = bl.code;
+        option.textContent = stateName(bl.code);
+        els.stateSelect.appendChild(option);
+      });
+      els.stateSelect.value = state.selectedState;
+    }
+
     function init() {
       loadPersistedState();
-
-      // Populate Federal States dropdown
-      BUNDESLAENDER.forEach(bl => {
-        const opt = document.createElement("option");
-        opt.value = bl.code;
-        opt.textContent = bl.name;
-        if (bl.code === state.selectedState) opt.selected = true;
-        els.stateSelect.appendChild(opt);
-      });
+      applyLanguage();
+      populateStateSelect();
 
       els.unseenOnlyToggle.checked = state.prioritizeUnseen;
       els.timerToggle.checked = state.timerEnabled;
@@ -2697,7 +2761,7 @@
        ========================================================================== */
     let modalConfirmCallback = null;
 
-    function showModal({ title, body, confirmText = "Bestätigen", showCancel = true, onConfirm = null }) {
+    function showModal({ title, body, confirmText = t("exam.modal.confirm"), showCancel = true, onConfirm = null }) {
       els.modalTitle.textContent = title;
       els.modalBody.textContent = body;
       els.modalConfirmBtn.textContent = confirmText;
@@ -2716,8 +2780,8 @@
        ========================================================================== */
     function updateStateLabels() {
       const bl = BUNDESLAENDER.find(b => b.code === state.selectedState) || BUNDESLAENDER[12];
-      els.blueprintStateName.textContent = `Bundesland (${bl.name})`;
-      els.stateCoverageLabel.textContent = `Landesfragen (${bl.name})`;
+      els.blueprintStateName.textContent = t("tests.stateLabel", { state: stateName(bl.code) });
+      els.stateCoverageLabel.textContent = t("tests.coverage.state", { state: stateName(bl.code) });
     }
 
     function updateCoverageBars() {
@@ -2730,13 +2794,21 @@
       ];
       const seenGeneralCount = generalPool.filter(q => seenSet.has(q.id)).length;
       const genPct = generalPool.length ? Math.round((seenGeneralCount / generalPool.length) * 100) : 0;
-      els.generalCoverageText.textContent = `${seenGeneralCount} / ${generalPool.length} gesehen (${genPct}%)`;
+      els.generalCoverageText.textContent = t("coverage.seen", {
+        seen: seenGeneralCount,
+        total: generalPool.length,
+        pct: genPct
+      });
       els.generalCoverageFill.style.width = `${genPct}%`;
 
       const statePool = QUESTION_BANK.states[state.selectedState] || [];
       const seenStateCount = statePool.filter(q => seenSet.has(q.id)).length;
       const statePct = statePool.length ? Math.round((seenStateCount / statePool.length) * 100) : 0;
-      els.stateCoverageText.textContent = `${seenStateCount} / ${statePool.length} gesehen (${statePct}%)`;
+      els.stateCoverageText.textContent = t("coverage.seen", {
+        seen: seenStateCount,
+        total: statePool.length,
+        pct: statePct
+      });
       els.stateCoverageFill.style.width = `${statePct}%`;
     }
 
@@ -2752,7 +2824,7 @@
         const card = document.createElement("div");
         card.className = "test-card";
 
-        let badgeHtml = `<span class="status-pill new">Neu</span>`;
+        let badgeHtml = `<span class="status-pill new">${t("tests.card.new")}</span>`;
         if (prevResult) {
           badgeHtml = prevResult.passed
             ? `<span class="status-pill passed">✓ ${prevResult.score}/33</span>`
@@ -2762,20 +2834,24 @@
         card.innerHTML = `
           <div>
             <div class="test-card-top">
-              <div class="test-number">Übungstest ${test.id}</div>
+              <div class="test-number">${t("tests.card.title", { n: test.id })}</div>
               ${badgeHtml}
             </div>
-            <div class="test-focus">Schwerpunkt: ${test.focus}</div>
+            <div class="test-focus">${t("tests.card.focus", { focus: t("tests.card.focusValue") })}</div>
           </div>
           <button class="btn-primary start-test-btn" data-test-id="${test.id}" type="button">
-            ${prevResult ? "Erneut üben" : "Test starten"} →
+            ${prevResult ? t("tests.card.again") : t("tests.card.start")}
           </button>
         `;
 
         els.testsGrid.appendChild(card);
       });
 
-      els.completedSummary.textContent = `${completedCount} von ${TEST_CATALOG.length} Tests abgeschlossen (${state.selectedState})`;
+      els.completedSummary.textContent = t("tests.completed", {
+        done: completedCount,
+        total: TEST_CATALOG.length,
+        state: stateName(state.selectedState)
+      });
     }
 
     function updateHomeStats() {
@@ -2792,7 +2868,7 @@
       const pct = generalPool.length ? Math.round((seenCount / generalPool.length) * 100) : 0;
 
       if (els.homeTestsCompleted) els.homeTestsCompleted.textContent = completed;
-      if (els.homeStateName) els.homeStateName.textContent = `(${bl.name})`;
+      if (els.homeStateName) els.homeStateName.textContent = `(${stateName(bl.code)})`;
       if (els.homeCoverage) els.homeCoverage.textContent = `${pct}%`;
       if (els.homeStateResults) els.homeStateResults.textContent = Object.keys(state.statePracticeResults).length;
     }
@@ -2808,8 +2884,10 @@
         button.className = "state-card" + (bl.code === state.selectedState ? " selected" : "");
         button.innerHTML = `
           <span class="state-code">${bl.code}</span>
-          <span class="state-name">${bl.name}</span>
-          <span class="state-meta">${result ? `${result.score}/${result.total} · geübt` : "10 Fragen"}</span>
+          <span class="state-name">${escapeHtml(stateName(bl.code))}</span>
+          <span class="state-meta">${result
+            ? t("states.card.practised", { score: result.score, total: result.total })
+            : t("states.card.meta")}</span>
         `;
         button.addEventListener("click", () => startStatePractice(bl.code));
         els.statesGrid.appendChild(button);
@@ -2830,25 +2908,28 @@
           .includes(query);
       });
 
-      els.vocabCount.textContent = `${filtered.length} von ${items.length} Wörtern`;
+      els.vocabCount.textContent = t("vocab.count", { shown: filtered.length, total: items.length });
       els.vocabList.innerHTML = filtered.length
         ? filtered.map(vocabularyCardHtml).join("")
-        : `<div class="browse-empty">Keine Wörter gefunden.</div>`;
+        : `<div class="browse-empty">${t("vocab.empty")}</div>`;
     }
 
     function vocabularyCardHtml(item) {
       const display = item.article ? `${item.article} ${item.word}` : item.word;
-      const extra = item.plural ? `Plural: ${item.plural}` : item.kind || "";
+      const kindKey = { Nomen: "noun", Verb: "verb", Adjektiv: "adjective" }[item.kind];
+      const kindLabel = kindKey ? t(`vocab.kind.${kindKey}`) : (item.kind || "");
+      const extra = item.plural ? `${t("vocab.plural")}: ${item.plural}` : kindLabel;
+      const showEnglish = state.showEnglishGlobal;
       return `
         <article class="vocab-card">
           <div class="vocab-head">
             <span class="vocab-word">${escapeHtml(display)}</span>
-            <span class="vocab-theme">${escapeHtml(VOCAB_THEME_LABELS[item.theme] || item.theme || "")}</span>
+            <span class="vocab-theme">${escapeHtml(t(`vocab.theme.${item.theme}`))}</span>
           </div>
-          <div class="vocab-en">${escapeHtml(item.en)}</div>
+          ${showEnglish ? `<div class="vocab-en">${escapeHtml(item.en)}</div>` : ""}
           ${extra ? `<div class="vocab-extra">${escapeHtml(extra)}</div>` : ""}
           <div class="vocab-example">${escapeHtml(item.exampleDe)}</div>
-          ${item.exampleEn ? `<div class="vocab-example-en">${escapeHtml(item.exampleEn)}</div>` : ""}
+          ${showEnglish && item.exampleEn ? `<div class="vocab-example-en">${escapeHtml(item.exampleEn)}</div>` : ""}
         </article>
       `;
     }
@@ -2878,13 +2959,14 @@
 
     function populateBrowseStates() {
       if (!els.browseStateSelect) return;
-      els.browseStateSelect.innerHTML = `<option value="all">Alle Bundesländer</option>`;
+      els.browseStateSelect.innerHTML = `<option value="all">${t("browse.state.all")}</option>`;
       BUNDESLAENDER.forEach(bl => {
         const option = document.createElement("option");
         option.value = bl.code;
-        option.textContent = bl.name;
+        option.textContent = stateName(bl.code);
         els.browseStateSelect.appendChild(option);
       });
+      els.browseStateSelect.value = state.browseState;
     }
 
     function renderBrowseList() {
@@ -2902,7 +2984,7 @@
           item.en,
           item.expDe,
           item.expEn,
-          item.categoryLabel,
+          categoryLabel(item.categoryKey, item.stateCode),
           ...item.optionsDe,
           ...item.optionsEn
         ].filter(Boolean).join(" ").toLowerCase();
@@ -2914,10 +2996,13 @@
         els.browseStateSelect.disabled = state.browseTopic !== "state";
       }
 
-      els.browseCount.textContent = `${filtered.length} von ${BROWSE_QUESTIONS.length} Fragen`;
+      els.browseCount.textContent = t("browse.count", {
+        shown: filtered.length,
+        total: BROWSE_QUESTIONS.length
+      });
       els.browseList.innerHTML = filtered.length
         ? filtered.map(browseItemHtml).join("")
-        : `<div class="browse-empty">Keine Fragen gefunden.</div>`;
+        : `<div class="browse-empty">${t("browse.empty")}</div>`;
     }
 
     function browseItemHtml(item) {
@@ -2927,7 +3012,7 @@
         ? `<span class="browse-en">${escapeHtml(item.en)}</span>`
         : "";
       const image = item.image
-        ? `<img class="browse-image" src="${escapeHtml(item.image)}" alt="Abbildung zur Frage" loading="lazy" />`
+        ? `<img class="browse-image" src="${escapeHtml(item.image)}" alt="${t("browse.imageAlt")}" loading="lazy" />`
         : "";
       const options = item.optionsDe.map((text, index) => {
         const isCorrect = showAnswers && index === item.correct;
@@ -2941,7 +3026,7 @@
         </div>`;
       }).join("");
       const explanation = showAnswers
-        ? `<div class="browse-explanation"><strong>Erläuterung:</strong> ${escapeHtml(item.expDe)}
+        ? `<div class="browse-explanation"><strong>${t("browse.explanation")}:</strong> ${escapeHtml(item.expDe)}
             ${state.showEnglishGlobal ? `<br /><em>${escapeHtml(item.expEn)}</em>` : ""}
           </div>`
         : "";
@@ -2950,7 +3035,7 @@
         <summary>
           <span class="browse-id">${escapeHtml(item.id)}</span>
           <span class="browse-question">${escapeHtml(item.de)}${questionEn}</span>
-          <span class="browse-badge">${escapeHtml(item.categoryLabel)}</span>
+          <span class="browse-badge">${escapeHtml(categoryLabel(item.categoryKey, item.stateCode))}</span>
         </summary>
         <div class="browse-body">
           ${image}
@@ -2991,8 +3076,7 @@
 
       const showHeaderBack = viewName === "exam" || viewName === "results";
       els.headerHomeBtn.classList.toggle("hidden", !showHeaderBack);
-      els.headerHomeBtn.textContent =
-        viewName === "exam" ? "← Test verlassen" : viewName === "results" ? "← Zurück" : "← Startseite";
+      updateHeaderBackLabel();
 
       if (viewName !== "exam") {
         stopTimer();
@@ -3029,8 +3113,8 @@
       const bl = BUNDESLAENDER.find(b => b.code === state.selectedState);
       els.examTitleBadge.textContent =
         testId === "random"
-          ? `Zufalls-Prüfung (${bl.name})`
-          : `Übungstest ${testId} (${bl.name})`;
+          ? t("exam.title.random", { state: stateName(bl.code) })
+          : t("exam.title.test", { n: testId, state: stateName(bl.code) });
 
       switchView("exam");
       renderQuestion();
@@ -3074,7 +3158,7 @@
       state.flaggedQuestions = new Set();
       state.singleQuestionEnVisible = false;
 
-      els.examTitleBadge.textContent = `Landesfragen – ${bl.name}`;
+      els.examTitleBadge.textContent = t("exam.title.state", { state: stateName(bl.code) });
       switchView("exam");
       renderQuestion();
       renderQuestionNavigator();
@@ -3113,17 +3197,36 @@
       }
     }
 
+    function updateExamTitleBadge() {
+      if (!els.examTitleBadge) return;
+      if (state.examKind === "state") {
+        els.examTitleBadge.textContent = t("exam.title.state", { state: stateName(state.selectedState) });
+      } else if (state.activeTestId === "random") {
+        els.examTitleBadge.textContent = t("exam.title.random", { state: stateName(state.selectedState) });
+      } else {
+        els.examTitleBadge.textContent = t("exam.title.test", {
+          n: state.activeTestId,
+          state: stateName(state.selectedState)
+        });
+      }
+    }
+
     function renderQuestion() {
       const q = state.questions[state.currentIndex];
       const total = state.questions.length;
 
-      els.questionProgressText.textContent = `Frage ${state.currentIndex + 1} von ${total}`;
+      updateExamTitleBadge();
+      els.questionProgressText.textContent = t("exam.progress", {
+        current: state.currentIndex + 1,
+        total
+      });
 
-      els.questionCategoryBadge.textContent = q.categoryLabel;
+      els.questionCategoryBadge.textContent = categoryLabel(q.categoryKey, state.selectedState);
       els.questionCategoryBadge.className = `cat-badge ${q.categoryKey}`;
 
       const showEn = state.showEnglishGlobal || state.singleQuestionEnVisible;
-      els.singleLangBtn.textContent = showEn ? "EN ausblenden" : "EN zeigen";
+      els.singleLangBtn.classList.toggle("hidden", state.showEnglishGlobal);
+      els.singleLangBtn.textContent = showEn ? t("exam.hideEn") : t("exam.showEn");
       els.singleLangBtn.classList.toggle("active", state.singleQuestionEnVisible);
 
       els.questionTextDe.textContent = q.de;
@@ -3169,20 +3272,25 @@
       });
 
       const isFlagged = state.flaggedQuestions.has(state.currentIndex);
-      els.flagQuestionBtn.textContent = isFlagged ? "🚩 Markierung entfernen" : "🚩 Zur Überprüfung markieren";
+      els.flagQuestionBtn.textContent = isFlagged ? t("exam.unflag") : t("exam.flag");
       els.flagQuestionBtn.style.borderColor = isFlagged ? "#f59e0b" : "";
       els.flagQuestionBtn.style.background = isFlagged ? "#fffbeb" : "";
 
       els.prevQuestionBtn.disabled = state.currentIndex === 0;
       els.prevQuestionBtn.style.opacity = state.currentIndex === 0 ? "0.5" : "1";
+      els.prevQuestionBtn.textContent = t("exam.prev");
 
       els.nextQuestionBtn.textContent =
-        state.currentIndex === total - 1 ? "Zur Auswertung →" : "Weiter →";
+        state.currentIndex === total - 1 ? t("exam.toResults") : t("exam.next");
     }
 
     function renderQuestionNavigator() {
       const answeredCount = Object.keys(state.userAnswers).length;
-      els.answeredCountText.textContent = `${answeredCount} von ${state.questions.length} beantwortet`;
+      els.sidebarTitle.textContent = t("exam.sidebar.title", { total: state.questions.length });
+      els.answeredCountText.textContent = t("exam.answered", {
+        answered: answeredCount,
+        total: state.questions.length
+      });
 
       els.questionNavGrid.innerHTML = "";
       state.questions.forEach((_, idx) => {
@@ -3193,7 +3301,7 @@
         if (idx === state.currentIndex) dot.classList.add("current");
         if (state.flaggedQuestions.has(idx)) dot.classList.add("flagged");
         dot.textContent = idx + 1;
-        dot.title = `Frage ${idx + 1}`;
+        dot.title = t("results.question", { n: idx + 1 });
 
         dot.addEventListener("click", () => {
           state.currentIndex = idx;
@@ -3216,9 +3324,9 @@
 
       if (unanswered > 0) {
         showModal({
-          title: "Nicht alle Fragen beantwortet",
-          body: `Sie haben ${answered} von ${total} Fragen beantwortet (${unanswered} offen). Möchten Sie den Test trotzdem abgeben?`,
-          confirmText: "Jetzt abgeben",
+          title: t("exam.modal.unanswered.title"),
+          body: t("exam.modal.unanswered.body", { answered, total, open: unanswered }),
+          confirmText: t("exam.modal.submitNow"),
           showCancel: true,
           onConfirm: () => {
             hideModal();
@@ -3275,48 +3383,27 @@
       updateHomeStats();
 
       const pct = Math.round((totalCorrect / total) * 100);
-      els.verdictBadge.className = `verdict-badge ${practice ? "practice" : passed ? "pass" : "fail"}`;
-      els.verdictBadge.textContent = practice
-        ? "✓ ÜBUNG ABGESCHLOSSEN"
-        : passed
-          ? "✓ TEST BESTANDEN"
-          : "✗ NICHT BESTANDEN";
-      els.scoreHeadline.textContent = `${totalCorrect} / ${total} Richtige (${pct}%)`;
-
-      if (timedOut) {
-        els.scoreSubtext.textContent = `Die Zeit ist abgelaufen. ${
-          passed
-            ? `Sie haben dennoch mindestens ${passMark} Punkte erreicht und bestanden!`
-            : `Für das Bestehen sind mindestens ${passMark} richtige Antworten erforderlich.`
-        }`;
-      } else if (practice) {
-        els.scoreSubtext.textContent = "Sie haben alle 10 Landesfragen bearbeitet. Wiederholen Sie die Übung oder wählen Sie ein anderes Bundesland.";
-      } else {
-        els.scoreSubtext.textContent = passed
-          ? `Herzlichen Glückwunsch! Sie haben die erforderliche Mindestpunktzahl von ${passMark} Punkten erreicht.`
-          : `Für das Bestehen des Einbürgerungstests benötigen Sie mindestens ${passMark} richtige Antworten.`;
-      }
+      state.lastResult = {
+        total,
+        totalCorrect,
+        pct,
+        passMark,
+        practice,
+        passed,
+        timedOut,
+        stateCode: state.selectedState,
+        categoryStats: Object.entries(categoryStats).map(([key, value]) => ({
+          key,
+          correct: value.correct,
+          total: value.total
+        }))
+      };
 
       els.categoryBreakdownGrid.innerHTML = "";
-      Object.values(categoryStats).forEach(category => {
-        if (category.total === 0) return;
-        const div = document.createElement("div");
-        div.className = "breakdown-card";
-        div.innerHTML = `
-          <div class="breakdown-name">${category.label}</div>
-          <div class="breakdown-val">${category.correct} / ${category.total}</div>
-        `;
-        els.categoryBreakdownGrid.appendChild(div);
-      });
-
-      const wrongCount = total - totalCorrect;
-      els.filterAllTab.textContent = `Alle (${total})`;
-      els.filterWrongTab.textContent = `Falsch / Offen (${wrongCount})`;
-      els.filterCorrectTab.textContent = `Richtig (${totalCorrect})`;
-      els.reviewTitle.textContent = `Detaillierte Auswertung aller ${total} Fragen`;
-
-      els.backToTestsBtn.textContent = state.examKind === "state" ? "Landesfragen anzeigen" : "Alle Tests anzeigen";
-      els.retakeTestBtn.textContent = state.examKind === "state" ? "↻ Übung wiederholen" : "↻ Test wiederholen";
+      els.filterAllTab.textContent = "";
+      els.filterWrongTab.textContent = "";
+      els.filterCorrectTab.textContent = "";
+      els.reviewTitle.textContent = "";
 
       state.reviewFilter = "all";
       document.querySelectorAll(".filter-tab").forEach(tab => {
@@ -3324,7 +3411,63 @@
       });
 
       switchView("results");
+      renderResultSummary();
       renderReviewList();
+    }
+
+    function renderResultSummary() {
+      const result = state.lastResult;
+      if (!result) return;
+
+      els.verdictBadge.className = `verdict-badge ${result.practice ? "practice" : result.passed ? "pass" : "fail"}`;
+      els.verdictBadge.textContent = result.practice
+        ? t("results.verdict.practice")
+        : result.passed
+          ? t("results.verdict.pass")
+          : t("results.verdict.fail");
+      els.scoreHeadline.textContent = t("results.score", {
+        correct: result.totalCorrect,
+        total: result.total,
+        pct: result.pct
+      });
+
+      if (result.timedOut) {
+        const outcome = result.practice
+          ? ""
+          : result.passed
+            ? ` ${t("results.sub.pass", { mark: result.passMark })}`
+            : ` ${t("results.sub.fail", { mark: result.passMark })}`;
+        els.scoreSubtext.textContent = `${t("results.sub.timeout")}${outcome}`;
+      } else if (result.practice) {
+        els.scoreSubtext.textContent = t("results.sub.practice");
+      } else {
+        els.scoreSubtext.textContent = result.passed
+          ? t("results.sub.pass", { mark: result.passMark })
+          : t("results.sub.fail", { mark: result.passMark });
+      }
+
+      els.categoryBreakdownGrid.innerHTML = "";
+      result.categoryStats.forEach(category => {
+        if (category.total === 0) return;
+        const div = document.createElement("div");
+        div.className = "breakdown-card";
+        div.innerHTML = `
+          <div class="breakdown-name">${categoryLabel(category.key, result.stateCode)}</div>
+          <div class="breakdown-val">${category.correct} / ${category.total}</div>
+        `;
+        els.categoryBreakdownGrid.appendChild(div);
+      });
+
+      const wrongCount = result.total - result.totalCorrect;
+      els.filterAllTab.textContent = t("results.filter.all", { total: result.total });
+      els.filterWrongTab.textContent = t("results.filter.wrong", { n: wrongCount });
+      els.filterCorrectTab.textContent = t("results.filter.correct", { n: result.totalCorrect });
+      els.reviewTitle.textContent = t("results.review.title", { total: result.total });
+
+      els.backToTestsBtn.textContent =
+        state.examKind === "state" ? t("results.back.states") : t("results.back.tests");
+      els.retakeTestBtn.textContent =
+        state.examKind === "state" ? t("results.retake.state") : t("results.retake.test");
     }
 
     function renderReviewList() {
@@ -3347,10 +3490,10 @@
             let tag = "";
             if (oIdx === q.correct) {
               cls += " is-correct";
-              tag = "✓ Richtige Antwort";
+              tag = t("results.answer.correct");
             } else if (oIdx === userAns && !isCorrect) {
               cls += " is-user-wrong";
-              tag = "✗ Ihre Antwort";
+              tag = t("results.answer.userWrong");
             }
             return `
               <div class="${cls}">
@@ -3361,19 +3504,25 @@
           })
           .join("");
 
+        const status = isCorrect
+          ? `<span style="color:var(--success)">${t("results.item.correct")}</span>`
+          : userAns === undefined
+            ? `<span style="color:var(--danger)">${t("results.item.open")}</span>`
+            : `<span style="color:var(--danger)">${t("results.item.wrong")}</span>`;
+
         item.innerHTML = `
           <div class="review-item-header">
             <span style="font-weight:800; font-size:0.9rem;">
-              Frage ${idx + 1} · ${isCorrect ? '<span style="color:var(--success)">Richtig</span>' : userAns === undefined ? '<span style="color:var(--danger)">Nicht beantwortet</span>' : '<span style="color:var(--danger)">Falsch</span>'}
+              ${t("results.question", { n: idx + 1 })} · ${status}
             </span>
-            <span class="cat-badge ${q.categoryKey}">${q.categoryLabel}</span>
+            <span class="cat-badge ${q.categoryKey}">${categoryLabel(q.categoryKey, state.lastResult?.stateCode)}</span>
           </div>
           <div style="font-weight:700; font-size:1rem; margin-bottom:0.25rem;">${q.de}</div>
           ${state.showEnglishGlobal ? `<div style="font-size:0.86rem; color:var(--text-secondary); font-style:italic;">${q.en}</div>` : ""}
-          ${q.image ? `<img class="review-image" src="${q.image}" alt="Abbildung zur Frage" loading="lazy" />` : ""}
+          ${q.image ? `<img class="review-image" src="${q.image}" alt="${t("browse.imageAlt")}" loading="lazy" />` : ""}
           <div class="review-options">${optionsHtml}</div>
           <div class="explanation-box">
-            <strong>Erläuterung:</strong> ${q.expDe}
+            <strong>${t("results.explanation")}:</strong> ${q.expDe}
             ${state.showEnglishGlobal ? `<br/><em>${q.expEn}</em>` : ""}
           </div>
         `;
@@ -3387,24 +3536,39 @@
        ========================================================================== */
     function updateGlobalLangUI() {
       els.globalLangToggle.classList.toggle("active", state.showEnglishGlobal);
-      els.globalLangLabel.textContent = state.showEnglishGlobal
-        ? "EN Übersetzung: AN"
-        : "EN Übersetzung: AUS";
+      els.globalLangLabel.textContent = t(state.showEnglishGlobal ? "global.langOn" : "global.langOff");
+    }
+
+    function refreshLanguage() {
+      applyLanguage();
+      updateGlobalLangUI();
+      updateHeaderBackLabel();
+      populateStateSelect();
+      populateBrowseStates();
+      updateStateLabels();
+      updateCoverageBars();
+      renderTestCards();
+      renderStateCards();
+      renderVocabulary();
+      renderBrowseList();
+      updateHomeStats();
+
+      if (!els.examView.classList.contains("hidden")) {
+        renderQuestion();
+        renderQuestionNavigator();
+      }
+      if (!els.resultsView.classList.contains("hidden")) {
+        renderResultSummary();
+        renderReviewList();
+      }
     }
 
     function bindEvents() {
       els.globalLangToggle.addEventListener("click", () => {
         state.showEnglishGlobal = !state.showEnglishGlobal;
-        updateGlobalLangUI();
+        state.singleQuestionEnVisible = false;
         savePersistedState();
-
-        if (!els.examView.classList.contains("hidden")) {
-          renderQuestion();
-        } else if (!els.resultsView.classList.contains("hidden")) {
-          renderReviewList();
-        } else if (!els.browseView.classList.contains("hidden")) {
-          renderBrowseList();
-        }
+        refreshLanguage();
       });
 
       els.stateSelect.addEventListener("change", e => {
@@ -3440,9 +3604,9 @@
 
       els.resetProgressBtn.addEventListener("click", () => {
         showModal({
-          title: "Lernverlauf zurücksetzen?",
-          body: "Alle gespeicherten Testergebnisse und die Übersicht der bereits gesehenen Fragen werden gelöscht.",
-          confirmText: "Zurücksetzen",
+          title: t("exam.modal.reset.title"),
+          body: t("exam.modal.reset.body"),
+          confirmText: t("exam.modal.reset.confirm"),
           showCancel: true,
           onConfirm: () => {
             state.seenQuestionIds = [];
@@ -3498,9 +3662,9 @@
       const confirmLeaveExam = (onConfirm = () => switchView("home")) => {
         if (!els.examView.classList.contains("hidden")) {
           showModal({
-            title: "Prüfung abbrechen?",
-            body: "Ihr aktueller Fortschritt in diesem Test geht verloren, wenn Sie die Prüfung verlassen.",
-            confirmText: "Test verlassen",
+            title: t("exam.modal.leave.title"),
+            body: t("exam.modal.leave.body"),
+            confirmText: t("exam.modal.leave.confirm"),
             showCancel: true,
             onConfirm: () => {
               hideModal();
