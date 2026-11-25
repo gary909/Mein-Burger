@@ -329,7 +329,7 @@
 "BE08";"mapped";1.00;1.00;"0,1,2,3";"D";"D";""
 "BE09";"mapped";1.00;0.88;"0,1,2,3";"D";"D";""
 "BE10";"mapped";1.00;1.00;"0,1,2,3";"C";"C";""
-"BB01";"mapped";1.00;1.00;"0,1,2,3";"D";"D";""
+"BB01";"override";1.00;1.00;"0,1,2,3";"A";"D";"Official BB01 image: Bild 1 is the Brandenburg eagle; override correct=0"
 "BB02";"mapped";1.00;1.00;"0,1,2,3";"A";"A";""
 "BB03";"mapped";1.00;1.00;"0,1,2,3";"C";"C";""
 "BB04";"mapped";1.00;1.00;"0,1,2,3";"B";"B";""

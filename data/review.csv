@@ -329,7 +329,7 @@
 "BE08";"mapped";125;"Welches Bundesland ist Berlin?";"1";"2";"3";"4";"D";"Welches Bundesland ist Berlin?";1.00;1.00;""
 "BE09";"mapped";126;"Wie nennt man die Regierungschefin/den Regierungschef des Stadtstaates Berlin?";"Ministerpräsidentin/Ministerpräsident";"Oberbürgermeisterin/Oberbürgermeister";"Präsidentin/Präsident des Senates";"Regierende Bürgermeisterin/Regierender Bürgermeister";"D";"Wie nennt man die Regierungschefin/den Regierungschef des Stadtstaates Berlin?";1.00;0.88;""
 "BE10";"mapped";126;"Welche Senatorin/welchen Senator hat Berlin nicht?";"Finanzsenatorin/Finanzsenator";"Innensenatorin/Innensenator";"Senatorin/Senator für Außenbeziehungen";"Justizsenatorin/Justizsenator";"C";"Welche Senatorin/welchen Senator hat Berlin nicht?";1.00;1.00;""
-"BB01";"mapped";127;"Welches Wappen gehört zum Bundesland Brandenburg?";"Bild 1";"Bild 2";"Bild 3";"Bild 4";"D";"Welches Wappen gehört zum Bundesland Brandenburg?";1.00;1.00;""
+"BB01";"override";127;"Welches Wappen gehört zum Bundesland Brandenburg?";"Bild 1";"Bild 2";"Bild 3";"Bild 4";"A";"Welches Wappen gehört zum Bundesland Brandenburg?";1.00;1.00;"Official BB01 image: Bild 1 is the Brandenburg eagle; override correct=0"
 "BB02";"mapped";127;"Welches ist ein Landkreis in Brandenburg?";"Prignitz";"Rhein-Sieg-Kreis";"Vogtlandkreis";"Amberg-Sulzbach";"A";"Welches ist ein Landkreis in Brandenburg?";1.00;1.00;""
 "BB03";"mapped";128;"Für wie viele Jahre wird der Landtag in Brandenburg gewählt?";"3";"4";"5";"6";"C";"Für wie viele Jahre wird der Landtag in Brandenburg gewählt?";1.00;1.00;""
 "BB04";"mapped";128;"Ab welchem Alter darf man in Brandenburg bei Kommunalwahlen wählen?";"14";"16";"18";"20";"B";"Ab welchem Alter darf man in Brandenburg bei Kommunalwahlen wählen?";1.00;1.00;""
