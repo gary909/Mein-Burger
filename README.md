@@ -33,6 +33,16 @@ data/
 
 No web server is required; `data/questions.js`, `data/vocabulary.js` and `data/i18n.js` are loaded as classic scripts so the app also works from `file://`.
 
+### Runtime-only package
+
+Create a clean copy containing only the files needed to run the app:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools/package.ps1
+```
+
+This writes `dist/` (48 files, ~6.6 MB) and `mein-burger-runtime.zip` (~6.2 MB). Both are git-ignored. The packaged app still opens directly from `dist/index.html` with no server. The 43 illustrations are stored as optimized 8-bit grayscale PNGs (~6.1 MB total).
+
 ## Data sources and attribution
 
 - **Questions**: official BAMF catalogue “Gesamtfragenkatalog zum Test Leben in Deutschland und zum Einbürgerungstest”, **Stand 07.05.2025** (PDF version 23, SHA-256 `EDD3ED5E56A35241B6CC61AA0630482DC9E64498DB508A7D6892CCEE2EC707A9`).
@@ -59,6 +69,7 @@ No web server is required; `data/questions.js`, `data/vocabulary.js` and `data/i
 | `tools/Catalogue/` | .NET builder: parses the PDF text, maps answers, writes the data files |
 | `tools/Extract/` | .NET/PdfPig helper used to inspect and render the official PDF |
 | `tools/compare-with-pdf.ps1` | Optional audit: compares the source dataset with the PDF text |
+| `tools/package.ps1` | Builds the runtime-only `dist/` folder and zip |
 
 `data/questions.js` is **generated** — do not edit it by hand. Change the source data, the overrides or the builder instead.
 
