@@ -24,6 +24,14 @@ Copy-Item -LiteralPath (Join-Path $root "data/images") -Destination (Join-Path $
 Mein-Burger runtime package
 Open index.html in a browser. Keep the data folder next to it.
 No server or build step is required.
+
+Sources and licenses
+- Questions: official BAMF catalogue "Gesamtfragenkatalog zum Test Leben in Deutschland und zum Einbürgerungstest", Stand 07.05.2025.
+  https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Einbuergerung/gesamtfragenkatalog-lebenindeutschland.html
+- Answers, English translations, explanations and remaining images: abdullahbutt/leben-in-deutschland-test, licensed CC BY-NC 4.0 (attribution, non-commercial use).
+- The state coat-of-arms and state map images, plus selected question images, are redrawn replacements for this project.
+- BB01 is corrected to Bild 1 according to the official BAMF page.
+- This is an independent learning app, not an official BAMF product.
 "@ | Set-Content -LiteralPath (Join-Path $dist "README.txt") -Encoding UTF8
 
 if (Test-Path -LiteralPath $zip) {
