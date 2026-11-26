@@ -2581,15 +2581,89 @@
       }));
     }
 
-    function generateExamQuestions(testId, stateCode) {
-      const isRandom = testId === "random";
-      const rng = isRandom
-        ? Math.random
-        : mulberry32(testId * 7919 + stateCode.charCodeAt(0) * 31 + stateCode.charCodeAt(1));
+    const FIXED_SEQUENCE_CACHE = new Map();
+    const FIXED_TEST_SEED = 0x5EED1234;
 
+    function hashString(value) {
+      let hash = 2166136261;
+      for (let i = 0; i < value.length; i++) {
+        hash ^= value.charCodeAt(i);
+        hash = Math.imul(hash, 16777619);
+      }
+      return hash >>> 0;
+    }
+
+    function fixedSequence(key, pool) {
+      if (!FIXED_SEQUENCE_CACHE.has(key)) {
+        const rng = mulberry32(FIXED_TEST_SEED ^ hashString(key));
+        FIXED_SEQUENCE_CACHE.set(key, shuffleWithRng(pool, rng));
+      }
+      return FIXED_SEQUENCE_CACHE.get(key);
+    }
+
+    function takeFixedQuestions(pool, count, sequenceKey, categoryKey, categoryLabel, testNumber) {
+      const sequence = fixedSequence(sequenceKey, pool);
+      const offset = ((testNumber - 1) * count) % sequence.length;
+      const questions = [];
+      for (let i = 0; i < count; i++) {
+        questions.push({
+          ...sequence[(offset + i) % sequence.length],
+          categoryKey,
+          categoryLabel
+        });
+      }
+      return questions;
+    }
+
+    function generateFixedExamQuestions(testId, stateCode) {
+      const testNumber = Number(testId);
+      const stateObj = BUNDESLAENDER.find(b => b.code === stateCode) || BUNDESLAENDER[12];
+      const statePool = QUESTION_BANK.states[stateCode] || QUESTION_BANK.states.SN;
+
+      return [
+        ...takeFixedQuestions(
+          QUESTION_BANK.democracy,
+          18,
+          "democracy",
+          "democracy",
+          "Leben in der Demokratie",
+          testNumber
+        ),
+        ...takeFixedQuestions(
+          QUESTION_BANK.history,
+          9,
+          "history",
+          "history",
+          "Geschichte und Verantwortung",
+          testNumber
+        ),
+        ...takeFixedQuestions(
+          QUESTION_BANK.society,
+          3,
+          "society",
+          "society",
+          "Mensch und Gesellschaft",
+          testNumber
+        ),
+        ...takeFixedQuestions(
+          statePool,
+          3,
+          `state:${stateCode}`,
+          "state",
+          `Bundesland: ${stateObj.name}`,
+          testNumber
+        )
+      ];
+    }
+
+    function generateExamQuestions(testId, stateCode) {
+      if (testId !== "random") {
+        return generateFixedExamQuestions(testId, stateCode);
+      }
+
+      const rng = Math.random;
       const seenSet = new Set(state.seenQuestionIds);
-      // Preset tests (1-20) are deterministic; unseen-question prioritization applies only in random mode
-      const prioritize = isRandom && state.prioritizeUnseen;
+      const prioritize = state.prioritizeUnseen;
 
       const demQuestions = pickCategoryQuestions(
         QUESTION_BANK.democracy,

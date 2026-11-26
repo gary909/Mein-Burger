@@ -9,6 +9,7 @@ An app to help you pass the German Citizenship test (Einbürgerungstest).
 - **Complete catalogue**: 300 federal questions + 10 questions for each of the 16 Bundesländer = **460 questions**.
 - **Five clear sections** on the home page: Test machen, Landesfragen, Über den Test, Neue Wörter für B1 and Alle Fragen.
 - **20 practice tests + a random exam**, each with the 33-question structure (18 democracy, 9 history, 3 society, 3 state), 60-minute timer and the official pass mark of **17/33**.
+- **Full fixed-test coverage**: the 20 fixed tests use a deterministic, coverage-aware rotation. Tests **1–17 cover all 300 federal questions**; tests 18–20 are bonus/review tests with repeats. The random exam still prioritises unseen questions.
 - **Landesfragen practice**: choose any Bundesland and practise all 10 state questions, untimed, with score and full review.
 - **All 460 questions** in a searchable/filterable browser with the correct answers highlighted and explanations.
 - **100 B1 vocabulary entries** (article/plural, English, example sentences) grouped by theme.
