@@ -14,7 +14,7 @@ An app to help you pass the German Citizenship test (Einbürgerungstest).
 - **100 B1 vocabulary entries** (article/plural, English, example sentences) grouped by theme.
 - **German and English** question text, answer options and explanations.
 - **Full German/English interface**: the EN toggle in the header translates the whole UI (home, About, tests, states, vocabulary, browse, exam controls and results). Questions remain in German with the English translation underneath; vocabulary English translations are shown only in EN mode.
-- **43 image questions** (coats of arms and Bundesland maps) with the original illustrations.
+- **43 image questions** (coats of arms and Bundesland maps) with optimized illustrations.
 - **Progress tracking** (seen questions, coverage per pool, results per Bundesland/test, state practice scores) stored in the browser via `localStorage`.
 - Single-page app, no framework and no build step. Works by opening `index.html` directly.
 
@@ -28,7 +28,8 @@ data/
   questions.js      (generated question catalogue)
   vocabulary.js     (100 B1 vocabulary entries)
   i18n.js           (German/English UI translations)
-  images/           (43 illustrations)
+  overrides.json    (source corrections, including BB01)
+  images/           (43 optimized illustrations)
 ```
 
 No web server is required; `data/questions.js`, `data/vocabulary.js` and `data/i18n.js` are loaded as classic scripts so the app also works from `file://`.
@@ -60,46 +61,15 @@ This writes `dist/` (48 files, ~6.6 MB) and `mein-burger-runtime.zip` (~6.2 MB).
 | `data/questions.js` | Generated catalogue (`window.EINBUERGERUNG_DATA`) |
 | `data/vocabulary.js` | 100 B1 vocabulary entries (`window.B1_VOCABULARY`) |
 | `data/i18n.js` | German/English UI strings (`window.I18N`) |
+| `data/overrides.json` | Source corrections and the BB01 answer fix |
 | `data/images/` | Illustrations for image-based questions |
-| `data/pdf-questions.json` | Official question/option wording parsed from the BAMF PDF |
-| `data/answer-map.csv` | Dataset answer → official option mapping (confidence and notes) |
-| `data/overrides.json` | Manual corrections (English text, explanations, option translations) |
-| `data/review.csv` | Human-readable proof sheet with page numbers for all 460 questions |
-| `data/summary.json` | Counts and topic distribution of the generated catalogue |
-| `tools/Catalogue/` | .NET builder: parses the PDF text, maps answers, writes the data files |
-| `tools/Extract/` | .NET/PdfPig helper used to inspect and render the official PDF |
-| `tools/compare-with-pdf.ps1` | Optional audit: compares the source dataset with the PDF text |
 | `tools/package.ps1` | Builds the runtime-only `dist/` folder and zip |
 
-`data/questions.js` is **generated** — do not edit it by hand. Change the source data, the overrides or the builder instead.
-
-## Regenerating the question data
-
-1. Put the official PDF and the source dataset in `tools/.cache/` and download the 43 images into `data/images/` (the dataset repository contains them).
-2. Extract the PDF text:
-
-   ```powershell
-   pdftotext -layout -enc UTF-8 gesamtfragenkatalog.pdf tools/.cache/bamf.txt
-   ```
-
-3. Run the builder (requires the .NET SDK):
-
-   ```powershell
-   dotnet run --project tools/Catalogue -- tools/.cache/bamf.txt tools/.cache/quiz-data.json data data/overrides.json
-   ```
-
-   The builder parses the official wording, maps the dataset's correct option to the official option by text similarity, applies `data/overrides.json`, and validates: 300 federal + 16 × 10 state questions, four options each, valid answer indices, existing images, and no unresolved mappings. It writes `data/questions.js`, `data/pdf-questions.json`, `data/answer-map.csv`, `data/review.csv`, `data/summary.json` and `data/unresolved.json`.
-
-4. Optional: audit the source dataset against the PDF text (output goes to `tools/.cache/dataset-vs-pdf.csv`):
-
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File tools/compare-with-pdf.ps1 -PdfText tools/.cache/bamf.txt -Dataset tools/.cache/quiz-data.json
-   ```
+`data/questions.js` is a generated, committed catalogue — do not edit it by hand. The generation and PDF-audit tooling has been removed from this minimal repository; `data/overrides.json` preserves the corrections that were applied.
 
 ## TODO
 
 - Review the remaining wording differences between the dataset and the official PDF for English translation nuance (the German text is already official).
-- Spot-check the 450 automatically mapped answers and the 10 overrides.
 - Expand the B1 vocabulary list beyond the initial 100 words.
 - Create an iPhone/Android app.
 - Create a printed book: vocabulary overview, 10 tests, full questions.

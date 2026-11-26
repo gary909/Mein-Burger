@@ -1,5 +1,2 @@
-tools/**/bin/
-tools/**/obj/
-tools/.cache/
 dist/
 mein-burger-runtime.zip
